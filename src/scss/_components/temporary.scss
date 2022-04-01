@@ -77,7 +77,15 @@
 
     label {
       display: flex;
+      flex-direction: column;
       width: 100%;
+
+      &.is-error {
+        input {
+          border-color: #DF1931 !important;
+          color: #df1931;
+        }
+      }
 
       input {
         outline: none;
@@ -92,10 +100,32 @@
         font-weight: 400;
         font-size: 14px;
         color: #fff;
+        @include transition(border-color);
         @include inputPlaceholder {
           font-weight: 400;
           font-size: 14px;
           color: #F1F1F2;
+        }
+
+        &:focus {
+          border-color: #fff;
+          @include transition(border-color);
+        }
+
+        & + span {
+          display: flex;
+          align-items: center;
+          padding-top: 3px;
+          font-size: 14px;
+          line-height: 20px;
+          color: #DF1931;
+
+          img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin-right: 10px;
+          }
         }
       }
     }

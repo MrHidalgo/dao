@@ -10,8 +10,12 @@ section#temporary.temporary
 
     form.temporary__form
       div
+        // .is-error
         label
           input(type='email' name='' placeholder='Enter your email' required)
+          //span
+            img(src="img/icon-alert.svg" alt="")
+            | Incorrect Email
       div
         .c-btn__wrapper
           button.c-btn.c-btn--bg(type='submit') Subscribe

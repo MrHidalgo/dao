@@ -1,0 +1,60 @@
+// BUTTON :: START
+
+.c-btn {
+  outline: none;
+  cursor: pointer;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: auto;
+  height: 48px;
+  padding-left: 40px;
+  padding-right: 40px;
+  padding-bottom: 4px;
+  margin: 0;
+  border: 1px solid #DF1931;
+  border-radius: 4px;
+  box-shadow: none;
+  background-color: transparent;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 1;
+  text-align: center;
+  color: #DF1931;
+  @include transition(border-color, background-color, color);
+  @include adaptive(1023) {
+    font-size: 18px;
+  }
+
+  &:hover {
+    border-color: #B51428;
+    background-color: #b51428;
+    color: #ffffff;
+    @include transition(border-color, background-color, color);
+  }
+
+  &:active {
+    border-color: #921020;
+    background-color: #921020;
+    @include transition(border-color, background-color, color);
+
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+
+    &--center {
+      justify-content: center;
+    }
+  }
+
+  span {
+    @include adaptive(767) {
+      display: none;
+    }
+  }
+}
+
+// BUTTON :: END

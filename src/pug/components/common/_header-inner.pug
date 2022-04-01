@@ -1,0 +1,32 @@
+// HEADER :: START
+
+nav#header.header.header--inner
+
+  .header__wrapper
+    .header__wrapper-left
+
+      .logo.logo--header
+        a.logo__btn(href="#")
+          img(src="img/logo-white.svg" alt="")
+          img(src="img/logo-icon.svg" alt="")
+
+    .header__wrapper-right
+
+      .c-dropdown__wrapper
+        a.c-dropdown__toggle(href="#")
+          img(src="img/icon-ethereum.svg" alt="")
+          span Ethereum
+          i.icon-font.icon-chevron-down
+        .c-dropdown
+          div
+            a(href="#")
+              img(src="img/icon-ethereum.svg" alt="")
+              span Ethereum
+            a(href="#")
+              img(src="img/icon-polygon.svg" alt="")
+              span Polygon
+
+      .c-btn__wrapper
+        a.c-btn.c-btn--bg(href="#")!= "Connect Wallet"
+
+// HEADER :: END

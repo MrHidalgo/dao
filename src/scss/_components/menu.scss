@@ -1,0 +1,131 @@
+// SECTION :: START
+
+.menu {
+  width: 100%;
+  max-width: 1280px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin-left: auto;
+  margin-right: auto;
+  @include adaptive(767) {
+    overflow: hidden;
+    padding-top: 15px;
+  }
+
+  &__block {
+    position: relative;
+    display: flex;
+    align-items: flex-end;
+    min-height: 210px;
+    padding: 24px 34px;
+    border: 1px solid #FFFFFF;
+    background-color: transparent;
+    @include transition(border-color);
+    @include adaptive(767) {
+      min-height: 190px;
+      padding: 30px 15px;
+    }
+
+    &:hover {
+      border-color: transparent;
+      @include transition(border-color 0.1s);
+
+      .menu__block {
+        &-bg {
+          opacity: 1;
+          visibility: visible;
+          @include transition(opacity, visibility);
+        }
+
+        &-content {
+          hr {
+            background-color: #ffffff;
+            @include transition(background-color);
+          }
+        }
+      }
+    }
+
+    &-bg {
+      z-index: 0;
+      opacity: 0;
+      visibility: visible;
+      position: absolute;
+      top: -15px;
+      left: -15px;
+      width: calc(100% + 30px);
+      height: calc(100% + 30px);
+      background-image: url('../img/img-menu-item-bg.png');
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: contain;
+      @include transition(opacity, visibility);
+      @include adaptive(1023) {
+        top: -10px;
+        left: -10px;
+        width: calc(100% + 20px);
+        height: calc(100% + 20px);
+      }
+    }
+
+    &-content {
+      z-index: 2;
+      position: relative;
+
+      h3 {
+        font-weight: 400;
+        font-size: 24px;
+        line-height: 24px;
+        color: #F1F1F2;
+        @include adaptive(767) {
+          font-size: 22px;
+        }
+      }
+
+      hr {
+        width: 20px;
+        height: 2px;
+        margin: 12px 0 10px;
+        padding: 0;
+        border-radius: 5px;
+        border: none;
+        box-shadow: none;
+        background-color: #DF1931;
+        @include transition(background-color);
+      }
+
+      p {
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #F1F1F2;
+        @include adaptive(767) {
+          font-size: 14px;
+        }
+      }
+    }
+
+    &-wrapper {
+      position: relative;
+      left: -24px;
+      display: flex;
+      flex-wrap: wrap;
+      width: calc(100% + 24px);
+
+      > div {
+        width: 100%;
+        max-width: calc(100% / 3);
+        padding-left: 24px;
+        padding-bottom: 24px;
+        @include adaptive(1023) {
+          max-width: calc(100% / 2);
+        }
+        @include adaptive(767) {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// SECTION :: END

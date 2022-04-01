@@ -27,6 +27,24 @@
     font-size: 18px;
   }
 
+  &.c-btn--bg {
+    padding-left: 20px;
+    padding-right: 20px;
+    border-color: #DF1931;
+    background-color: #df1931;
+    color: #ffffff;
+
+    &:hover {
+      border-color: #B51428;
+      background-color: #B51428;
+    }
+
+    &:active {
+      border-color: #921020;
+      background-color: #921020;
+    }
+  }
+
   &:hover {
     border-color: #B51428;
     background-color: #b51428;
@@ -38,7 +56,6 @@
     border-color: #921020;
     background-color: #921020;
     @include transition(border-color, background-color, color);
-
   }
 
   &__wrapper {

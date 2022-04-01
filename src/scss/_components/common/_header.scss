@@ -7,6 +7,20 @@
   left: 0;
   width: 100%;
 
+  &.header--inner {
+    .header {
+      &__wrapper {
+        &-right {
+          .c-btn {
+            height: 40px;
+            margin-left: 16px;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+  }
+
   &__wrapper {
     display: flex;
     align-items: center;
@@ -17,6 +31,11 @@
     @include adaptive(1279) {
       padding-left: 15px;
       padding-right: 15px;
+    }
+
+    &-right {
+      display: flex;
+      align-items: center;
     }
   }
 }

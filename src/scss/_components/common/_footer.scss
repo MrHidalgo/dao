@@ -11,6 +11,10 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  &.footer--wbg {
+    background: none;
+  }
+
   &__wrapper {
     display: flex;
     align-items: center;

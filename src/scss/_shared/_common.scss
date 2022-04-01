@@ -10,9 +10,9 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 100vh;
+    //height: 100vh;
     min-height: 100vh;
-    max-height: 100vh;
+    //max-height: 100vh;
     padding-top: 88px;
     padding-bottom: 88px;
     @include adaptive(767) {

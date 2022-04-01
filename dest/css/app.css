@@ -325,9 +325,7 @@ picture {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100vh;
   min-height: 100vh;
-  max-height: 100vh;
   padding-top: 88px;
   padding-bottom: 88px;
 }
@@ -789,17 +787,20 @@ picture {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100vh;
   min-height: 100vh;
-  max-height: 100vh;
   padding-top: 88px;
   padding-bottom: 164px;
+}
+@media screen and (max-width: 1023px) {
+  .homepage__wrapper {
+    padding-top: 100px;
+    padding-bottom: 125px;
+  }
 }
 @media screen and (max-width: 767px) {
   .homepage__wrapper {
     height: auto;
     max-height: unset;
-    padding-top: 100px;
     padding-bottom: 100px;
   }
 }

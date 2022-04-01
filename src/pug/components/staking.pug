@@ -1,0 +1,150 @@
+// SECTION :: START
+
+section#staking.staking
+
+  .staking__header
+    .staking__header-wrapper
+      div
+
+        .logo.logo--staking
+          a.logo__btn(href="#")
+            img(src="img/logo-icon.svg" alt="")
+
+        +hamburger()
+
+      .staking__header-mobile(mobile-block-js)
+        div
+
+          nav.staking__header-nav
+            a.is-active(href="#") Staking
+            a(href="#") Playground
+            a(href="#") Bridge
+            a(href="#") Venture
+            a(href="#") Toolkit
+
+        div
+
+          a.staking__header-btn(href="#") Buy $RSIST
+
+          .c-dropdown__wrapper
+            a.c-dropdown__toggle(href="#")
+              img(src="img/icon-ethereum.svg" alt="")
+              span Ethereum
+              i.icon-font.icon-chevron-down
+            .c-dropdown
+              div
+                a(href="#")
+                  img(src="img/icon-ethereum.svg" alt="")
+                  span Ethereum
+                a(href="#")
+                  img(src="img/icon-polygon.svg" alt="")
+                  span Polygon
+
+          .c-dropdown__wrapper
+            a.c-dropdown__toggle(href="#")
+              span 0xF21F0aF21F0aF21F0aF21F0a
+              i.icon-font.icon-chevron-down
+            .c-dropdown
+              div
+                a(href="#")
+                  span 0xF21F0aF21F0aF21F0aF21F0a
+                a(href="#")
+                  span 0xF21F0aF21F0aF21F0aF21F0a
+
+  .staking__body
+    .staking__body-head
+      div
+
+        .staking__toggle
+          a.is-active(href="#") All
+          a(href="#") My Liqudity
+
+        .staking__form
+          label
+            input(type='text' name='' placeholder="Search...")
+            a(href="#")
+              i.icon-font.icon-search
+
+      div
+
+        .c-dropdown__wrapper
+          a.c-dropdown__toggle(href="#")
+            span All Chains
+            i.icon-font.icon-chevron-down
+          .c-dropdown
+            div
+              a(href="#")
+                span Action 1
+              a(href="#")
+                span Action 2
+
+    .staking__body-content
+
+      .staking__table-container
+        table.staking__table
+          thead
+            tr
+              th Token
+              th Chain
+              th APY
+              th TVL
+              th Volume 24H
+              th Volume 7D
+              th Earned
+              th
+              th
+          tbody
+            tr
+              td
+                .token
+                  div
+                    img(src="img/icon-single.png" srcset='img/icon-single@2x.png 2x' alt="")
+                  div
+                    p $RSIST
+              td
+                .chain
+                  img(src="img/icon-double.png" srcset='img/icon-double@2x.png 2x' alt="")
+              td
+                p 0.45%
+              td
+                p $83.56M
+              td
+                p $569.72
+              td
+               p $131.69K
+              td
+               p $120.43
+              td
+                a.action(href="#") Add Liquidity
+              td
+                a.more(href="#")
+                  i.icon-font.icon-dots
+            each val, idx in [1,2,3,4,5,6,7,8,9,0]
+              tr(class!= (idx > 5)?'is-opacity':'')
+                td
+                  .token
+                    div
+                      img(src="img/icon-double.png" srcset='img/icon-double@2x.png 2x' alt="")
+                    div
+                      p USDC – WETH
+                td
+                  .chain
+                    img(src="img/icon-double.png" srcset='img/icon-double@2x.png 2x' alt="")
+                td
+                  p 0.45%
+                td
+                  p $83.56M
+                td
+                  p $499.93
+                td
+                  p $120.43
+                td
+                  p -
+                td
+                  a.action(href="#") Add Liquidity
+                td
+                  a.more(href="#")
+                    i.icon-font.icon-dots
+
+
+// SECTION :: END

@@ -1,0 +1,445 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <!-- META TAGS-->
+    <meta charset="utf-8">
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta http-equiv="Content-Style-Type" content="text/css">
+    <meta http-equiv="Content-Script-Type" content="text/javascript">
+    <meta name="format-detection" content="telephone=yes">
+    <meta name="HandheldFriendly" content="true">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no, user-scalable=0">
+    <meta name="author" content="">
+    <meta name="designer" content="">
+    <meta name="publisher" content="">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta name="robots" content="index,follow">
+    <meta name="distribution" content="web">
+    <meta name="robots" content="noodp">
+    <!-- TITLE-->
+    <title>The DeFiance DAO</title>
+    <!-- FAVICON-->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Kiwi+Maru:wght@300;400;500&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/meyer-reset/2.0/reset.min.css" integrity="sha512-NmLkDIU1C/C88wi324HBc+S2kLhi08PN5GDeUVVVC/BVt/9Izdsc9SVeVfA1UZbY3sHUlDSyRXhCzHfr6hmPPw==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css" integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <!-- STYLE :: START-->
+    <!--link(rel="stylesheet" href="css/vendor.css")-->
+    <link rel="stylesheet" href="css/app.css">
+    <!-- STYLE :: END-->
+  </head>
+  <body class="is-dark">
+    <main class="main main--start p-home">
+      <!-- SECTION :: START-->
+      <section class="staking" id="staking">
+        <div class="staking__header">
+          <div class="staking__header-wrapper">
+            <div>
+              <div class="logo logo--staking"><a class="logo__btn" href="#"><img src="img/logo-icon.svg" alt=""></a></div>
+              <div class="hamburger hamburger--squeeze" role="button" hamburger-js="hamburger-js">
+                <div class="hamburger-box">
+                  <div class="hamburger-inner"></div>
+                </div>
+              </div>
+            </div>
+            <div class="staking__header-mobile" mobile-block-js>
+              <div>
+                <nav class="staking__header-nav"><a class="is-active" href="#">Staking</a><a href="#">Playground</a><a href="#">Bridge</a><a href="#">Venture</a><a href="#">Toolkit</a></nav>
+              </div>
+              <div><a class="staking__header-btn" href="#">Buy $RSIST</a>
+                <div class="c-dropdown__wrapper"><a class="c-dropdown__toggle" href="#"><img src="img/icon-ethereum.svg" alt=""><span>Ethereum</span><i class="icon-font icon-chevron-down"></i></a>
+                  <div class="c-dropdown">
+                    <div><a href="#"><img src="img/icon-ethereum.svg" alt=""><span>Ethereum</span></a><a href="#"><img src="img/icon-polygon.svg" alt=""><span>Polygon</span></a></div>
+                  </div>
+                </div>
+                <div class="c-dropdown__wrapper"><a class="c-dropdown__toggle" href="#"><span>0xF21F0aF21F0aF21F0aF21F0a</span><i class="icon-font icon-chevron-down"></i></a>
+                  <div class="c-dropdown">
+                    <div><a href="#"><span>0xF21F0aF21F0aF21F0aF21F0a</span></a><a href="#"><span>0xF21F0aF21F0aF21F0aF21F0a</span></a></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="staking__body">
+          <div class="staking__body-head">
+            <div>
+              <div class="staking__toggle"><a class="is-active" href="#">All</a><a href="#">My Liqudity</a></div>
+              <div class="staking__form">
+                <label>
+                  <input type="text" name="" placeholder="Search..."><a href="#"><i class="icon-font icon-search"></i></a>
+                </label>
+              </div>
+            </div>
+            <div>
+              <div class="c-dropdown__wrapper"><a class="c-dropdown__toggle" href="#"><span>All Chains</span><i class="icon-font icon-chevron-down"></i></a>
+                <div class="c-dropdown">
+                  <div><a href="#"><span>Action 1</span></a><a href="#"><span>Action 2</span></a></div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="staking__body-content">
+            <div class="staking__table-container">
+              <table class="staking__table">
+                <thead>
+                  <tr>
+                    <th>Token</th>
+                    <th>Chain</th>
+                    <th>APY</th>
+                    <th>TVL</th>
+                    <th>Volume 24H</th>
+                    <th>Volume 7D</th>
+                    <th>Earned</th>
+                    <th></th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <div class="token">
+                        <div><img src="img/icon-single.png" srcset="img/icon-single@2x.png 2x" alt=""></div>
+                        <div>
+                          <p>$RSIST</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="chain"><img src="img/icon-double.png" srcset="img/icon-double@2x.png 2x" alt=""></div>
+                    </td>
+                    <td>
+                      <p>0.45%</p>
+                    </td>
+                    <td>
+                      <p>$83.56M</p>
+                    </td>
+                    <td>
+                      <p>$569.72</p>
+                    </td>
+                    <td>
+                      <p>$131.69K</p>
+                    </td>
+                    <td>
+                      <p>$120.43</p>
+                    </td>
+                    <td><a class="action" href="#">Add Liquidity</a></td>
+                    <td><a class="more" href="#"><i class="icon-font icon-dots"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="token">
+                        <div><img src="img/icon-double.png" srcset="img/icon-double@2x.png 2x" alt=""></div>
+                        <div>
+                          <p>USDC – WETH</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="chain"><img src="img/icon-double.png" srcset="img/icon-double@2x.png 2x" alt=""></div>
+                    </td>
+                    <td>
+                      <p>0.45%</p>
+                    </td>
+                    <td>
+                      <p>$83.56M</p>
+                    </td>
+                    <td>
+                      <p>$499.93</p>
+                    </td>
+                    <td>
+                      <p>$120.43</p>
+                    </td>
+                    <td>
+                      <p>-</p>
+                    </td>
+                    <td><a class="action" href="#">Add Liquidity</a></td>
+                    <td><a class="more" href="#"><i class="icon-font icon-dots"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="token">
+                        <div><img src="img/icon-double.png" srcset="img/icon-double@2x.png 2x" alt=""></div>
+                        <div>
+                          <p>USDC – WETH</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="chain"><img src="img/icon-double.png" srcset="img/icon-double@2x.png 2x" alt=""></div>
+                    </td>
+                    <td>
+                      <p>0.45%</p>
+                    </td>
+                    <td>
+                      <p>$83.56M</p>
+                    </td>
+                    <td>
+                      <p>$499.93</p>
+                    </td>
+                    <td>
+                      <p>$120.43</p>
+                    </td>
+                    <td>
+                      <p>-</p>
+                    </td>
+                    <td><a class="action" href="#">Add Liquidity</a></td>
+                    <td><a class="more" href="#"><i class="icon-font icon-dots"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="token">
+                        <div><img src="img/icon-double.png" srcset="img/icon-double@2x.png 2x" alt=""></div>
+                        <div>
+                          <p>USDC – WETH</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="chain"><img src="img/icon-double.png" srcset="img/icon-double@2x.png 2x" alt=""></div>
+                    </td>
+                    <td>
+                      <p>0.45%</p>
+                    </td>
+                    <td>
+                      <p>$83.56M</p>
+                    </td>
+                    <td>
+                      <p>$499.93</p>
+                    </td>
+                    <td>
+                      <p>$120.43</p>
+                    </td>
+                    <td>
+                      <p>-</p>
+                    </td>
+                    <td><a class="action" href="#">Add Liquidity</a></td>
+                    <td><a class="more" href="#"><i class="icon-font icon-dots"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="token">
+                        <div><img src="img/icon-double.png" srcset="img/icon-double@2x.png 2x" alt=""></div>
+                        <div>
+                          <p>USDC – WETH</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="chain"><img src="img/icon-double.png" srcset="img/icon-double@2x.png 2x" alt=""></div>
+                    </td>
+                    <td>
+                      <p>0.45%</p>
+                    </td>
+                    <td>
+                      <p>$83.56M</p>
+                    </td>
+                    <td>
+                      <p>$499.93</p>
+                    </td>
+                    <td>
+                      <p>$120.43</p>
+                    </td>
+                    <td>
+                      <p>-</p>
+                    </td>
+                    <td><a class="action" href="#">Add Liquidity</a></td>
+                    <td><a class="more" href="#"><i class="icon-font icon-dots"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="token">
+                        <div><img src="img/icon-double.png" srcset="img/icon-double@2x.png 2x" alt=""></div>
+                        <div>
+                          <p>USDC – WETH</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="chain"><img src="img/icon-double.png" srcset="img/icon-double@2x.png 2x" alt=""></div>
+                    </td>
+                    <td>
+                      <p>0.45%</p>
+                    </td>
+                    <td>
+                      <p>$83.56M</p>
+                    </td>
+                    <td>
+                      <p>$499.93</p>
+                    </td>
+                    <td>
+                      <p>$120.43</p>
+                    </td>
+                    <td>
+                      <p>-</p>
+                    </td>
+                    <td><a class="action" href="#">Add Liquidity</a></td>
+                    <td><a class="more" href="#"><i class="icon-font icon-dots"></i></a></td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <div class="token">
+                        <div><img src="img/icon-double.png" srcset="img/icon-double@2x.png 2x" alt=""></div>
+                        <div>
+                          <p>USDC – WETH</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="chain"><img src="img/icon-double.png" srcset="img/icon-double@2x.png 2x" alt=""></div>
+                    </td>
+                    <td>
+                      <p>0.45%</p>
+                    </td>
+                    <td>
+                      <p>$83.56M</p>
+                    </td>
+                    <td>
+                      <p>$499.93</p>
+                    </td>
+                    <td>
+                      <p>$120.43</p>
+                    </td>
+                    <td>
+                      <p>-</p>
+                    </td>
+                    <td><a class="action" href="#">Add Liquidity</a></td>
+                    <td><a class="more" href="#"><i class="icon-font icon-dots"></i></a></td>
+                  </tr>
+                  <tr class="is-opacity">
+                    <td>
+                      <div class="token">
+                        <div><img src="img/icon-double.png" srcset="img/icon-double@2x.png 2x" alt=""></div>
+                        <div>
+                          <p>USDC – WETH</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="chain"><img src="img/icon-double.png" srcset="img/icon-double@2x.png 2x" alt=""></div>
+                    </td>
+                    <td>
+                      <p>0.45%</p>
+                    </td>
+                    <td>
+                      <p>$83.56M</p>
+                    </td>
+                    <td>
+                      <p>$499.93</p>
+                    </td>
+                    <td>
+                      <p>$120.43</p>
+                    </td>
+                    <td>
+                      <p>-</p>
+                    </td>
+                    <td><a class="action" href="#">Add Liquidity</a></td>
+                    <td><a class="more" href="#"><i class="icon-font icon-dots"></i></a></td>
+                  </tr>
+                  <tr class="is-opacity">
+                    <td>
+                      <div class="token">
+                        <div><img src="img/icon-double.png" srcset="img/icon-double@2x.png 2x" alt=""></div>
+                        <div>
+                          <p>USDC – WETH</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="chain"><img src="img/icon-double.png" srcset="img/icon-double@2x.png 2x" alt=""></div>
+                    </td>
+                    <td>
+                      <p>0.45%</p>
+                    </td>
+                    <td>
+                      <p>$83.56M</p>
+                    </td>
+                    <td>
+                      <p>$499.93</p>
+                    </td>
+                    <td>
+                      <p>$120.43</p>
+                    </td>
+                    <td>
+                      <p>-</p>
+                    </td>
+                    <td><a class="action" href="#">Add Liquidity</a></td>
+                    <td><a class="more" href="#"><i class="icon-font icon-dots"></i></a></td>
+                  </tr>
+                  <tr class="is-opacity">
+                    <td>
+                      <div class="token">
+                        <div><img src="img/icon-double.png" srcset="img/icon-double@2x.png 2x" alt=""></div>
+                        <div>
+                          <p>USDC – WETH</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="chain"><img src="img/icon-double.png" srcset="img/icon-double@2x.png 2x" alt=""></div>
+                    </td>
+                    <td>
+                      <p>0.45%</p>
+                    </td>
+                    <td>
+                      <p>$83.56M</p>
+                    </td>
+                    <td>
+                      <p>$499.93</p>
+                    </td>
+                    <td>
+                      <p>$120.43</p>
+                    </td>
+                    <td>
+                      <p>-</p>
+                    </td>
+                    <td><a class="action" href="#">Add Liquidity</a></td>
+                    <td><a class="more" href="#"><i class="icon-font icon-dots"></i></a></td>
+                  </tr>
+                  <tr class="is-opacity">
+                    <td>
+                      <div class="token">
+                        <div><img src="img/icon-double.png" srcset="img/icon-double@2x.png 2x" alt=""></div>
+                        <div>
+                          <p>USDC – WETH</p>
+                        </div>
+                      </div>
+                    </td>
+                    <td>
+                      <div class="chain"><img src="img/icon-double.png" srcset="img/icon-double@2x.png 2x" alt=""></div>
+                    </td>
+                    <td>
+                      <p>0.45%</p>
+                    </td>
+                    <td>
+                      <p>$83.56M</p>
+                    </td>
+                    <td>
+                      <p>$499.93</p>
+                    </td>
+                    <td>
+                      <p>$120.43</p>
+                    </td>
+                    <td>
+                      <p>-</p>
+                    </td>
+                    <td><a class="action" href="#">Add Liquidity</a></td>
+                    <td><a class="more" href="#"><i class="icon-font icon-dots"></i></a></td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+      <!-- SECTION :: END-->
+    </main>
+  </body>
+  <!-- SCRIPT :: START-->
+  <!--script(src="js/vendor.js")-->
+  <script src="js/app.js"></script>
+  <!-- SCRIPT :: END-->
+</html>

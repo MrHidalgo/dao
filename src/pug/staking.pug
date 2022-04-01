@@ -1,0 +1,15 @@
+---
+title: The DeFiance DAO
+
+pageClassName: p-home
+bodyClassMod: true
+---
+extends shared/_layout
+
+block header
+block footer
+block content
+  main.main.main--start(class!= pageClassName)
+
+    include components/staking
+

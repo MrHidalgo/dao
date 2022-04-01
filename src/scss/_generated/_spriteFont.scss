@@ -33,11 +33,17 @@
 	@if $filename == discord {
 		$char: "\E002";
 	}
-	@if $filename == medium {
+	@if $filename == dots {
 		$char: "\E003";
 	}
-	@if $filename == twitter {
+	@if $filename == medium {
 		$char: "\E004";
+	}
+	@if $filename == search {
+		$char: "\E005";
+	}
+	@if $filename == twitter {
+		$char: "\E006";
 	}
 
 	@return $char;
@@ -62,8 +68,16 @@
 	@include icon(discord);
 
 }
+.icon-dots {
+	@include icon(dots);
+
+}
 .icon-medium {
 	@include icon(medium);
+
+}
+.icon-search {
+	@include icon(search);
 
 }
 .icon-twitter {

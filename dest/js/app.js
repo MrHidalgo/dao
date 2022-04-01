@@ -103,6 +103,41 @@ __webpack_require__.r(__webpack_exports__);
 window.addEventListener('load', function (ev) {
   // COMMON
   _common_common__WEBPACK_IMPORTED_MODULE_0__["default"].initLoad(); // MACROS
+
+  var initHamburger = function initHamburger() {
+    var btn = document.querySelector("[hamburger-js]"),
+        hideScrollContainer = document.querySelectorAll("html, body"),
+        mobileContainer = document.querySelector("[mobile-block-js]");
+    /**
+     * @description
+     */
+
+    btn.addEventListener("click", function (ev) {
+      var elem = ev.currentTarget;
+      elem.classList.toggle("is-active");
+      mobileContainer.classList.toggle("is-open");
+      hideScrollContainer.forEach(function (val, idx) {
+        val.classList.toggle("is-hideScroll");
+      });
+    });
+  };
+
+  var initTableFilterToggle = function initTableFilterToggle() {
+    document.querySelectorAll('.staking__toggle a').forEach(function (val, idx) {
+      val.addEventListener('click', function (ev) {
+        document.querySelector('.staking__toggle a.is-active').classList.remove('is-active');
+
+        if (ev.currentTarget.classList.contains('is-active')) {
+          ev.currentTarget.classList.contains('is-active');
+        } else {
+          ev.currentTarget.classList.add('is-active');
+        }
+      }, false);
+    });
+  };
+
+  initHamburger();
+  initTableFilterToggle();
 }, false); // EVENT LISTENER - SCROLL
 // ========================================
 

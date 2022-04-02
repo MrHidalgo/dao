@@ -36,6 +36,14 @@
     &-right {
       display: flex;
       align-items: center;
+
+      .c-btn {
+        white-space: nowrap;
+
+        span {
+          padding-left: 4px;
+        }
+      }
     }
   }
 }

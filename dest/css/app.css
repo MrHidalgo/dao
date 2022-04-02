@@ -667,6 +667,12 @@ picture {
       -ms-flex-align: center;
           align-items: center;
 }
+.header__wrapper-right .c-btn {
+  white-space: nowrap;
+}
+.header__wrapper-right .c-btn span {
+  padding-left: 4px;
+}
 
 .footer {
   z-index: 99;

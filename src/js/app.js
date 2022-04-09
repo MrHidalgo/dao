@@ -11,6 +11,8 @@ window.addEventListener('load', (ev) => {
   // MACROS
   const initHamburger = () => {
 
+    if(!document.querySelector("[hamburger-js]")) return;
+
     const btn = document.querySelector("[hamburger-js]"),
       hideScrollContainer = document.querySelectorAll("html, body"),
       mobileContainer = document.querySelector("[mobile-block-js]");
@@ -33,6 +35,7 @@ window.addEventListener('load', (ev) => {
   };
 
   const initTableFilterToggle = () => {
+    if(!document.querySelector('.staking__toggle a')) return;
     document.querySelectorAll('.staking__toggle a').forEach((val, idx) => {
       val.addEventListener('click', (ev) => {
 
@@ -48,8 +51,21 @@ window.addEventListener('load', (ev) => {
     });
   };
 
+  const donationCB = () => {
+    if(!document.querySelector('[donation-input-js]')) return;
+
+    document.querySelector('[donation-input-js]').addEventListener('keyup', (ev) => {
+      const elVal = Number(ev.currentTarget.value),
+        donationVal = Number(document.querySelector('[donation-val-js]').getAttribute('data-donation-val')),
+        resultNode = document.querySelector('[donation-result-js]');
+
+      resultNode.innerText = elVal * donationVal;
+    });
+  };
+
   initHamburger();
   initTableFilterToggle();
+  donationCB();
 
 }, false);
 

@@ -1,0 +1,184 @@
+// SECTION :: START
+
+.donation {
+  padding-top: 35px;
+  padding-bottom: 35px;
+  background-image: url('../img/img-molotov.svg');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: contain;
+  @include adaptive(767) {
+    padding-top: 25px;
+    padding-bottom: 25px;
+  }
+
+  .c-grid {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+
+  &__wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    width: 100%;
+    max-width: 880px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 65px 30px;
+    border: 1px solid #FFFFFF;
+    @include adaptive(767) {
+      padding: 50px 20px;
+    }
+  }
+
+  &__title {
+    padding-bottom: 10px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 35px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  &__line {
+    width: 40px;
+    height: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 15px;
+    border-radius: 5px;
+    background-color: #DF1931;
+  }
+
+  &__desc {
+    padding-bottom: 40px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 465px;
+    margin-left: auto;
+    margin-right: auto;
+
+    &-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      > div {
+        width: 100%;
+        max-width: calc((100% - 15px) / 2);
+        margin-bottom: 15px;
+        @include adaptive(767) {
+          max-width: 100%;
+        }
+      }
+    }
+
+    &-result {
+      display: flex;
+      padding: 15px;
+      border-radius: 4px;
+      border: 1px dashed #4C4355;
+
+      > span {
+        width: 1px;
+        min-height: 40px;
+        margin-left: 15px;
+        margin-right: 15px;
+        border-radius: 5px;
+        background-color: #4C4355;
+      }
+
+      > div {
+        flex: 1;
+        min-width: 1px;
+        max-width: 100%;
+
+        p {
+          padding-bottom: 8px;
+          font-weight: 300;
+          font-size: 12px;
+          line-height: 16px;
+          color: #807E82;
+        }
+
+        h3,
+        h4 {
+          font-weight: 500;
+          font-size: 12px;
+          line-height: 16px;
+          color: #FFFFFF;
+        }
+
+        h4 {
+          display: flex;
+          align-items: center;
+
+          img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin-right: 5px;
+          }
+        }
+      }
+    }
+
+    label {
+      input {
+        appearance: none;
+        outline: none;
+        position: relative;
+        display: flex;
+        width: 100%;
+        height: 40px;
+        padding: 0 15px;
+        margin: 0;
+        border: 1px solid #4C4355;
+        border-radius: 4px;
+        background-color: transparent;
+        font-weight: 400;
+        font-size: 14px;
+        line-height: 20px;
+        color: #F1F1F2;
+        @include inputPlaceholder {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+          color: #F1F1F2;
+        }
+      }
+    }
+
+    .c-dropdown {
+      &__wrapper {
+        max-width: 100%;
+      }
+    }
+  }
+
+  &__btn {
+    padding-top: 30px;
+
+    .c-btn {
+      width: 100%;
+      height: 40px;
+      font-size: 16px;
+    }
+  }
+
+  .staking__toggle {
+    margin-bottom: 15px;
+  }
+}
+
+// SECTION :: END

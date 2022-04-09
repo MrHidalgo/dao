@@ -1,0 +1,52 @@
+// SECTION :: START
+
+section#donation.donation
+  .c-grid
+    .donation__wrapper
+
+      h2.donation__title Donation!
+      .donation__line
+
+      .staking__toggle
+        a.is-active(href="#") Deposit
+        a(href="#") Claim
+
+      p.donation__desc Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip.
+
+      form.donation__form(action='' method='' autocomplete='off')
+        .donation__form-group
+          div
+
+            .c-dropdown__wrapper
+              a.c-dropdown__toggle(href="#")
+                img(src="img/icon-ethereum.svg" alt="")
+                span Ethereum
+                i.icon-font.icon-chevron-down
+              .c-dropdown
+                div
+                  a(href="#")
+                    img(src="img/icon-ethereum.svg" alt="")
+                    span Ethereum
+                  a(href="#")
+                    img(src="img/icon-polygon.svg" alt="")
+                    span Polygon
+
+          div
+            label
+              input(type='number' name='' placeholder='Enter amount' donation-input-js)
+
+        .donation__form-result
+          div
+            p Token Price
+            h3(data-donation-val='134' donation-val-js) 1 ETH = 134 $RSIST
+          span
+          div
+            p You will get:
+            h4
+              img(src="img/circle-logo.svg" alt="")
+              span(donation-result-js) -
+
+      .donation__btn.c-btn__wrapper.c-btn__wrapper--cennter
+        a.c-btn.c-btn--bg(href="#") Connect Wallet
+
+// SECTION :: END

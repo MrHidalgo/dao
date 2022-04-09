@@ -105,6 +105,7 @@ window.addEventListener('load', function (ev) {
   _common_common__WEBPACK_IMPORTED_MODULE_0__["default"].initLoad(); // MACROS
 
   var initHamburger = function initHamburger() {
+    if (!document.querySelector("[hamburger-js]")) return;
     var btn = document.querySelector("[hamburger-js]"),
         hideScrollContainer = document.querySelectorAll("html, body"),
         mobileContainer = document.querySelector("[mobile-block-js]");
@@ -123,6 +124,7 @@ window.addEventListener('load', function (ev) {
   };
 
   var initTableFilterToggle = function initTableFilterToggle() {
+    if (!document.querySelector('.staking__toggle a')) return;
     document.querySelectorAll('.staking__toggle a').forEach(function (val, idx) {
       val.addEventListener('click', function (ev) {
         document.querySelector('.staking__toggle a.is-active').classList.remove('is-active');
@@ -136,8 +138,19 @@ window.addEventListener('load', function (ev) {
     });
   };
 
+  var donationCB = function donationCB() {
+    if (!document.querySelector('[donation-input-js]')) return;
+    document.querySelector('[donation-input-js]').addEventListener('keyup', function (ev) {
+      var elVal = Number(ev.currentTarget.value),
+          donationVal = Number(document.querySelector('[donation-val-js]').getAttribute('data-donation-val')),
+          resultNode = document.querySelector('[donation-result-js]');
+      resultNode.innerText = elVal * donationVal;
+    });
+  };
+
   initHamburger();
   initTableFilterToggle();
+  donationCB();
 }, false); // EVENT LISTENER - SCROLL
 // ========================================
 

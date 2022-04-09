@@ -6,6 +6,12 @@
   background-repeat: no-repeat;
   background-size: cover;
 
+  &.section--fundraising {
+    background-image: url('../img/img-face-1-bg.svg');
+    background-position: right bottom;
+    background-size: unset;
+  }
+
   &__wrapper {
     display: flex;
     align-items: center;

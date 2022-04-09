@@ -14,6 +14,31 @@
   &.footer--wbg {
     background: none;
   }
+  &.footer--iconWhite {
+    .footer {
+      &__social {
+        a {
+          &:hover {
+            .icon-font {
+              color: #b51428;
+              @include transition(color);
+            }
+          }
+
+          &:active {
+            .icon-font {
+              color: #921020;
+              @include transition(color);
+            }
+          }
+
+          .icon-font {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+  }
 
   &__wrapper {
     display: flex;

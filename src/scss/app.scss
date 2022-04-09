@@ -12,7 +12,7 @@
 @import "_shared/main-setting-reset";
 //@import "_shared/grid";
 @import "_shared/common";
-//@import "_shared/magnificPopup";
+@import "_shared/magnificPopup";
 //@import "_shared/swiper";
 @import "_shared/iconFont";
 
@@ -36,3 +36,5 @@
 
 @import "_components/fundraising/welcome";
 @import "_components/fundraising/donation";
+@import "_components/fundraising/total";
+@import "_components/fundraising/overview";

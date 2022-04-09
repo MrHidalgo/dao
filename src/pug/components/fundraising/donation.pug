@@ -38,7 +38,7 @@ section#donation.donation
         .donation__form-result
           div
             p Token Price
-            h3(data-donation-val='134' donation-val-js) 1 ETH = 134 $RSIST
+            h3(data-donation-val='134' data-donation-subval='$RSIST' donation-val-js) 1 ETH = 134 $RSIST
           span
           div
             p You will get:
@@ -47,6 +47,13 @@ section#donation.donation
               span(donation-result-js) -
 
       .donation__btn.c-btn__wrapper.c-btn__wrapper--cennter
-        a.c-btn.c-btn--bg(href="#") Connect Wallet
+        a.c-btn.c-btn--bg(
+          href="#"
+        ) Connect Wallet
+        a.c-btn.c-btn--bg(
+          href="#fundraisingDonation"
+          data-effect='mfp-zoom-in'
+          popup-js
+        ) Deposit
 
 // SECTION :: END

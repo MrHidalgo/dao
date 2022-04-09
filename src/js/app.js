@@ -57,15 +57,49 @@ window.addEventListener('load', (ev) => {
     document.querySelector('[donation-input-js]').addEventListener('keyup', (ev) => {
       const elVal = Number(ev.currentTarget.value),
         donationVal = Number(document.querySelector('[donation-val-js]').getAttribute('data-donation-val')),
-        resultNode = document.querySelector('[donation-result-js]');
+        donationSubval = document.querySelector('[donation-val-js]').getAttribute('data-donation-subval'),
+        resultNode = document.querySelector('[donation-result-js]'),
+        btnNode = document.querySelectorAll('.donation__btn .c-btn');
 
-      resultNode.innerText = elVal * donationVal;
+      if(elVal === 0) {
+        resultNode.innerText = '-';
+        $(btnNode[0]).show().css('display', 'flex');
+        $(btnNode[1]).hide();
+      } else {
+        resultNode.innerText = (elVal * donationVal) + ' ' + donationSubval;
+        $(btnNode[0]).hide();
+        $(btnNode[1]).show().css('display', 'flex');
+      }
+    });
+  };
+
+  const initPopups = () => {
+    $('[popup-js]').magnificPopup({
+      type: 'inline',
+      fixedContentPos: true,
+      fixedBgPos: true,
+      overflowY: 'auto',
+      closeBtnInside: true,
+      preloader: false,
+      midClick: true,
+      removalDelay: 300,
+      mainClass: 'is-show',
+      callbacks: {
+        beforeOpen: function() {
+          this.st.mainClass = this.st.el.attr('data-effect');
+          $('#fundraisingOverlay').show();
+        },
+        close: function() {
+          $('#fundraisingOverlay').hide();
+        }
+      }
     });
   };
 
   initHamburger();
   initTableFilterToggle();
   donationCB();
+  initPopups();
 
 }, false);
 

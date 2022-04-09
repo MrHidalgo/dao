@@ -11,6 +11,28 @@ block header
   include components/common/_header-inner
 block footer
   include components/common/_footer-withoutbg
+block modal
+  mixin modalContent()
+    .modal__body
+      img.c-modal__logo(src="img/icon-welcome.svg" alt="")
+      p.c-modal__title Congratulations!
+      .c-modal__line
+      .c-modal__desc-wrapper
+        p.c-modal__desc!= "We’ve got your <span>1 ETH</span> donation. You will be able to claim your <span>$RSIST</span> tokens when donation event will be ended."
+        p.c-modal__desc!= "Please, leave your email and we’ll notify you about that."
+      form.temporary__form
+        div
+          // .is-error
+          label
+            input(type='email' name='' placeholder='Enter your email' required)
+            //span
+              img(src="img/icon-alert.svg" alt="")
+              | Incorrect Email
+        div
+          .c-btn__wrapper
+            button.c-btn.c-btn--bg(type='submit') Subscribe
+
+  +modal('fundraisingDonation', 'modalContent')
 
 block content
   main.main(class!= pageClassName)
@@ -21,4 +43,8 @@ block content
 
         include components/fundraising/welcome
         include components/fundraising/donation
+        include components/fundraising/total
+        include components/fundraising/overview
+
+  #fundraisingOverlay
 

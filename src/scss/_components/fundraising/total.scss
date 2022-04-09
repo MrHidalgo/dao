@@ -1,0 +1,135 @@
+// SECTION :: START
+
+.total {
+  overflow: hidden;
+  position: relative;
+  padding-top: 135px;
+  padding-bottom: 135px;
+  @include adaptive(767) {
+    padding-top: 50px;
+    padding-bottom: 50px;
+  }
+
+  &__bg {
+    z-index: 0;
+    position: absolute;
+    top: -50px;
+    left: 0;
+    width: 100%;
+    height: calc(100% + 100px);
+    background-image: url('../img/img-total-bg.svg');
+    background-repeat: no-repeat;
+    background-position: center;
+    @include adaptive(767) {
+      opacity: 0.75;
+    }
+  }
+
+  &__wrapper {
+    z-index: 2;
+    position: relative;
+  }
+
+  &__title {
+    padding-bottom: 10px;
+    font-weight: 500;
+    font-size: 24px;
+    line-height: 35px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+
+  &__line {
+    width: 40px;
+    height: 2px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 20px;
+    border-radius: 5px;
+    background-color: #1E1A22;
+    @include adaptive(767) {
+      background-color: #ffffff;
+    }
+  }
+
+  &__block {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    max-width: 375px;
+    margin-left: auto;
+    margin-right: auto;
+    @include adaptive(767) {
+      flex-wrap: wrap;
+      justify-content: center;
+    }
+  }
+
+  &__list {
+    display: flex;
+    flex-direction: column;
+    @include adaptive(767) {
+      align-items: center;
+      padding-top: 25px;
+      padding-bottom: 25px;
+    }
+
+    li {
+      display: flex;
+
+      &:not(:last-of-type) {
+        padding-bottom: 20px;
+      }
+
+      &.red {
+        p {
+          &:after {
+            background-color: #e33147;
+          }
+        }
+      }
+      &.blue {
+        p {
+          &:after {
+            background-color: #51befc;
+          }
+        }
+      }
+      &.green {
+        p {
+          &:after {
+            background-color: #35ff86;
+          }
+        }
+      }
+      &.orange {
+        p {
+          &:after {
+            background-color: #e59419;
+          }
+        }
+      }
+    }
+
+    p {
+      position: relative;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      color: #FFFFFF;
+
+      &:after {
+        content: '';
+        position: absolute;
+        top: calc(100% + 3px);
+        left: 0;
+        width: 16px;
+        height: 2px;
+        border-radius: 5px;
+      }
+    }
+  }
+}
+
+// SECTION :: END

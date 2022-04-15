@@ -7,6 +7,12 @@
   padding: 96px 15px 30px;
   min-height: 100vh;
 
+  &.staking--bridge {
+    .staking__body {
+      background-color: transparent;
+    }
+  }
+
   &__header {
     z-index: 999;
     position: fixed;

@@ -36,14 +36,20 @@
 	@if $filename == dots {
 		$char: "\E003";
 	}
-	@if $filename == medium {
+	@if $filename == filter {
 		$char: "\E004";
 	}
-	@if $filename == search {
+	@if $filename == medium {
 		$char: "\E005";
 	}
-	@if $filename == twitter {
+	@if $filename == search {
 		$char: "\E006";
+	}
+	@if $filename == swap {
+		$char: "\E007";
+	}
+	@if $filename == twitter {
+		$char: "\E008";
 	}
 
 	@return $char;
@@ -72,12 +78,20 @@
 	@include icon(dots);
 
 }
+.icon-filter {
+	@include icon(filter);
+
+}
 .icon-medium {
 	@include icon(medium);
 
 }
 .icon-search {
 	@include icon(search);
+
+}
+.icon-swap {
+	@include icon(swap);
 
 }
 .icon-twitter {

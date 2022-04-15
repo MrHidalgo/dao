@@ -182,10 +182,31 @@ window.addEventListener('load', function (ev) {
     });
   };
 
+  var bridgeCB = function bridgeCB() {
+    $('.bridge__filter').on('click', function (ev) {
+      $(ev.currentTarget).siblings('.bridge__filter-dropdown').toggle();
+    });
+    var bridgeTransferBtn = $('[bridge-transfer-js]'),
+        bridgeInsufficientBtn = $('[bridge-insufficient-js]'),
+        bridgeInputBtn = $('[bridge-input-js]');
+    $('[bridge-destination-js]').on('keyup', function (ev) {
+      if ($(ev.currentTarget).val().length > 0 && Number(bridgeInputBtn.val()) >= 1) {
+        bridgeTransferBtn.hide();
+        bridgeInsufficientBtn.show().css({
+          display: 'flex'
+        });
+      } else {
+        bridgeTransferBtn.show();
+        bridgeInsufficientBtn.hide();
+      }
+    });
+  };
+
   initHamburger();
   initTableFilterToggle();
   donationCB();
   initPopups();
+  bridgeCB();
 }, false); // EVENT LISTENER - SCROLL
 // ========================================
 

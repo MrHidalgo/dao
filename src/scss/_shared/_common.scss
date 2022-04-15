@@ -176,10 +176,13 @@
   display: none;
   width: 100%;
   height: 100%;
-  background: rgba(0, 0, 0, 0.01);
-  backdrop-filter: blur(5px);
+  background: rgba(0, 0, 0, 0.2);
+  backdrop-filter: blur(24px);
 }
-
+.mfp-bg {
+  opacity: 0;
+  background-color: transparent;
+}
 .c-modal#fundraisingDonation {
   width: 100%;
   max-width: 880px;

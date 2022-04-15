@@ -1,0 +1,181 @@
+// SECTION :: START
+
+section#staking.staking.staking--bridge
+
+  .staking__header
+    .staking__header-wrapper
+      div
+
+        .logo.logo--staking
+          a.logo__btn(href="#")
+            img(src="img/logo-icon.svg" alt="")
+
+        +hamburger()
+
+      .staking__header-mobile(mobile-block-js)
+        div
+
+          nav.staking__header-nav
+            a.is-active(href="#") Staking
+            a(href="#") Playground
+            a(href="#") Bridge
+            a(href="#") Venture
+            a(href="#") Toolkit
+
+        div
+
+          a.staking__header-btn(href="#") Buy $RSIST
+
+          .c-dropdown__wrapper
+            a.c-dropdown__toggle(href="#")
+              img(src="img/icon-ethereum.svg" alt="")
+              span Ethereum
+              i.icon-font.icon-chevron-down
+            .c-dropdown
+              div
+                a(href="#")
+                  img(src="img/icon-ethereum.svg" alt="")
+                  span Ethereum
+                a(href="#")
+                  img(src="img/icon-polygon.svg" alt="")
+                  span Polygon
+
+          .c-dropdown__wrapper
+            a.c-dropdown__toggle(href="#")
+              span 0xF21F0aF21F0aF21F0aF21F0a
+              i.icon-font.icon-chevron-down
+            .c-dropdown
+              div
+                a(href="#")
+                  span 0xF21F0aF21F0aF21F0aF21F0a
+                a(href="#")
+                  span 0xF21F0aF21F0aF21F0aF21F0a
+
+  .staking__body
+
+    .bridge
+      .bridge__head
+        p.bridge__title Bridge
+
+        .bridge__filter-wrapper
+          a.bridge__filter(href="#")
+            i.icon-font.icon-filter
+          .bridge__filter-dropdown
+            div
+              p Transaction Deadline
+              label
+                input(type='checkbox' name='' checked)
+                span
+            input(type='text' name='' placeholder='Minutes until deadline')
+
+      .bridge__body
+
+        form.bridge__form(action='' method='' autocomplete='off')
+
+          .bridge__block
+            div
+              h2 Source
+
+              .c-dropdown__wrapper
+                a.c-dropdown__toggle(href="#")
+                  img(src="img/icon-ethereum.svg" alt="")
+                  span Ethereum
+                  i.icon-font.icon-chevron-down
+                .c-dropdown
+                  div
+                    a(href="#")
+                      img(src="img/icon-ethereum.svg" alt="")
+                      span Ethereum
+                    a(href="#")
+                      img(src="img/icon-polygon.svg" alt="")
+                      span Polygon
+
+              .bridge__block-box
+                div
+                  input(type='text' name='' placeholder='0.00' bridge-input-js)
+                  .c-dropdown__wrapper
+                    a.c-dropdown__toggle(href="#")
+                      img(src="img/icon-ethereum.svg" alt="")
+                      span ETH
+                      i.icon-font.icon-chevron-down
+                    .c-dropdown
+                      div
+                        a(href="#")
+                          img(src="img/icon-ethereum.svg" alt="")
+                          span Ethereum
+                        a(href="#")
+                          img(src="img/icon-polygon.svg" alt="")
+                          span Polygon
+                div
+                  span ~$0.00
+
+              h4
+                span Min: 10
+                span Balance: 11.45 ETH
+            div
+              span
+              span
+              a.bridge__block-reverse
+                i.icon-font.icon-swap
+            div
+              h2 Destination
+
+              .c-dropdown__wrapper
+                a.c-dropdown__toggle(href="#")
+                  img(src="img/icon-avalanche.svg" alt="")
+                  span Avalanche
+                  i.icon-font.icon-chevron-down
+                .c-dropdown
+                  div
+                    a(href="#")
+                      img(src="img/icon-ethereum.svg" alt="")
+                      span Ethereum
+                    a(href="#")
+                      img(src="img/icon-polygon.svg" alt="")
+                      span Polygon
+
+
+
+              .bridge__block-box
+                div
+                  input(type='text' name='' placeholder='0.00')
+                  .c-dropdown__wrapper
+                    a.c-dropdown__toggle(href="#")
+                      img(src="img/icon-avalanche.svg" alt="")
+                      span WETH
+                      i.icon-font.icon-chevron-down
+                    .c-dropdown
+                      div
+                        a(href="#")
+                          img(src="img/icon-ethereum.svg" alt="")
+                          span Ethereum
+                        a(href="#")
+                          img(src="img/icon-polygon.svg" alt="")
+                          span Polygon
+
+                div
+                  span ~$0.00
+
+              h4
+                span Min: 10
+                span Balance: 11.45 ETH
+          .bridge__address
+            label
+              p Destination Address
+              input(type='text' name='' placeholder='Enter destination address' bridge-destination-js)
+
+          .form__field
+            .c-btn__wrapper.c-btn__wrapper--center
+              a.c-btn.c-btn--bg(href="#" bridge-transfer-js) Transfer
+              a.c-btn.c-btn--bg(href="#" bridge-insufficient-js) Insufficient Balance
+
+
+      .bridge__footer(bridge-footer-js)
+        div
+          p Fee: 0.002 WETH
+          p 1 ETH = 0.9995 WETH
+        div
+          p Will receive 0.025 AVAX
+          p Slippage: -0.05%
+
+// SECTION :: END

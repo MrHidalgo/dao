@@ -1,0 +1,132 @@
+// SECTION :: START
+
+section#staking.staking
+
+  .staking__header
+    .staking__header-wrapper
+      div
+
+        .logo.logo--staking
+          a.logo__btn(href="#")
+            img(src="img/logo-icon.svg" alt="")
+
+        +hamburger()
+
+      .staking__header-mobile(mobile-block-js)
+        div
+
+          nav.staking__header-nav
+            a(href="#") Staking
+            a.is-active(href="#") Playground
+            a(href="#") Bridge
+            a(href="#") Venture
+            a(href="#") Toolkit
+
+        div
+
+          a.staking__header-btn(href="#") Buy $RSIST
+
+          .c-dropdown__wrapper
+            a.c-dropdown__toggle(href="#")
+              img(src="img/icon-ethereum.svg" alt="")
+              span Ethereum
+              i.icon-font.icon-chevron-down
+            .c-dropdown
+              div
+                a(href="#")
+                  img(src="img/icon-ethereum.svg" alt="")
+                  span Ethereum
+                a(href="#")
+                  img(src="img/icon-polygon.svg" alt="")
+                  span Polygon
+
+          .c-dropdown__wrapper
+            a.c-dropdown__toggle(href="#")
+              span 0xF21F0aF21F0aF21F0aF21F0a
+              i.icon-font.icon-chevron-down
+            .c-dropdown
+              div
+                a(href="#")
+                  span 0xF21F0aF21F0aF21F0aF21F0a
+                a(href="#")
+                  span 0xF21F0aF21F0aF21F0aF21F0a
+
+  .staking__body
+    .staking__body-head
+      div
+
+        .staking__toggle
+          a(href="#") Market
+          a.is-active(href="#") My Offers
+
+      div
+
+        .c-btn__wrapper
+          a.staking__notify(href="#")
+            i.icon-font.icon-notification
+            span 1
+          a.c-btn.c-btn--bg(href="#") List Token
+
+
+    .staking__body-content
+
+      .staking__table-container
+        table.staking__table
+          thead
+            tr
+              th Amount
+              th Status
+              th Buy now price
+              th No. of Bids
+              th Current Bid
+              th Ends
+          tbody
+            tr
+              td
+                p 345.00
+              td
+                p.is-open Open
+              td
+                u
+                  img(src="img/logo-playground.png" srcset="img/logo-playground@2x.png 2x" alt="")
+                  span 2100.00
+              td
+                p 17
+              td
+                u
+                  img(src="img/logo-playground.png" srcset="img/logo-playground@2x.png 2x" alt="")
+                  span 1432.00
+              td
+               p 14h 34m 35s
+            tr
+              td
+                p 345.00
+              td
+                p Closed
+              td
+                u
+                  img(src="img/logo-playground.png" srcset="img/logo-playground@2x.png 2x" alt="")
+                  span 1300.00
+              td
+                p 3
+              td
+                p -
+              td
+               p Ended
+            tr
+              td
+                p 345.00
+              td
+                p Closed
+              td
+                u
+                  img(src="img/logo-playground.png" srcset="img/logo-playground@2x.png 2x" alt="")
+                  span 1300.00
+              td
+                p 3
+              td
+                p -
+              td
+               p Ended
+
+// SECTION :: END

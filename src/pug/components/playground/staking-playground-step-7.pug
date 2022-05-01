@@ -1,0 +1,82 @@
+// SECTION :: START
+
+section#playground.playground
+
+  .staking__header
+    .staking__header-wrapper
+      div
+
+      .staking__header-mobile(mobile-block-js)
+        div
+        div
+          .c-dropdown__wrapper
+            a.c-dropdown__toggle(href="#")
+              img(src="img/icon-ethereum.svg" alt="")
+              span Ethereum
+              i.icon-font.icon-chevron-down
+            .c-dropdown
+              div
+                a(href="#")
+                  img(src="img/icon-ethereum.svg" alt="")
+                  span Ethereum
+                a(href="#")
+                  img(src="img/icon-polygon.svg" alt="")
+                  span Polygon
+
+          .c-dropdown__wrapper
+            a.c-dropdown__toggle(href="#")
+              span 0xF21F0aF21F0aF21F0aF21F0a
+              i.icon-font.icon-chevron-down
+            .c-dropdown
+              div
+                a(href="#")
+                  span 0xF21F0aF21F0aF21F0aF21F0a
+                a(href="#")
+                  span 0xF21F0aF21F0aF21F0aF21F0a
+
+
+  .playground__section
+    .playground__section-left
+      div
+
+        .logo.logo--playground
+          a.logo__btn(href="#")
+            img(src="img/logo-icon.svg" alt="")
+
+    .playground__section-right
+      div
+
+        form.playground__form.playground__form--last(action='' method='' autocomplete='off')
+          .playground__form-field
+            p.playground__form-label Amount
+            label
+              input(type='text' name='' placeholder='' value='1650.00')
+              img(src="img/circle-logo.svg" alt="")
+              span / 6571.22 USDC
+          .playground__form-field
+            p.playground__form-info Only ‘pre’ tokens are eligible to be listed.
+          .playground__form-field
+            p.playground__form-label Buy now price
+            label.is-full
+              input(type='text' name='' placeholder='' value='5000.00')
+              img(src="img/logo-playground.png" srcset='img/logo-playground@2x.png 2x' alt="")
+          .playground__form-group
+            div
+              .playground__form-field
+                p.playground__form-label Reserve Price
+                label.is-full
+                  input(type='text' name='' placeholder='' value='4300.00')
+                  img(src="img/logo-playground.png" srcset='img/logo-playground@2x.png 2x' alt="")
+            div
+              .playground__form-field
+                p.playground__form-label Time Limit
+                label.is-full
+                  input(type='text' name='' placeholder='' value='12:30')
+                  img(src="img/latest.svg" alt="")
+
+        .c-btn__wrapper.c-btn__wrapper--center
+          a.c-btn.c-btn--bg(href="#") List
+
+        a.playground__back(href="#") Cancel
+
+// SECTION :: END

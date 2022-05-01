@@ -1,0 +1,90 @@
+// SECTION :: START
+
+section#playground.playground
+
+  .staking__header
+    .staking__header-wrapper
+      div
+
+      .staking__header-mobile(mobile-block-js)
+        div
+        div
+          .c-dropdown__wrapper
+            a.c-dropdown__toggle(href="#")
+              img(src="img/icon-ethereum.svg" alt="")
+              span Ethereum
+              i.icon-font.icon-chevron-down
+            .c-dropdown
+              div
+                a(href="#")
+                  img(src="img/icon-ethereum.svg" alt="")
+                  span Ethereum
+                a(href="#")
+                  img(src="img/icon-polygon.svg" alt="")
+                  span Polygon
+
+          .c-dropdown__wrapper
+            a.c-dropdown__toggle(href="#")
+              span 0xF21F0aF21F0aF21F0aF21F0a
+              i.icon-font.icon-chevron-down
+            .c-dropdown
+              div
+                a(href="#")
+                  span 0xF21F0aF21F0aF21F0aF21F0a
+                a(href="#")
+                  span 0xF21F0aF21F0aF21F0aF21F0a
+
+
+  .playground__section
+    .playground__section-left
+      div
+
+        a.playground__box(href="#" class!= classMod)
+          .playground__box-head
+            .playground__box-header
+              div
+                span 12eij13jlk12312asdioasdgaosdb
+              div
+                p.playground__box-badge!= '14h 34m 35s'
+            .playground__box-num
+              img(src="img/img-playground-box-bg.svg" alt="")
+              p!= '345'
+          .playground__box-body
+            ul.playground__box-list
+              li
+                div
+                  p Amount
+                div
+                  p 345.00
+              li
+                div
+                  p Current bid
+                div
+                  img(src="img/logo-playground.png" srcset='img/logo-playground@2x.png 2x' alt="")
+                  p 1453.00
+              li
+                div
+                  p Buy now price
+                div
+                  img(src="img/logo-playground.png" srcset="img/logo-playground@2x.png 2x" alt="")
+                  p 2100.00
+
+    .playground__section-right
+      div
+
+        form.playground__form(action='' method='' autocomplete='off')
+          .playground__form-field
+            p.playground__form-label Place a bid
+            label
+              input(type='text' name='' placeholder='')
+              img(src="img/logo-playground.png" srcset="img/logo-playground@2x.png 2x" alt="")
+              span / 6571.22 USDC
+          .playground__form-field
+            p.playground__form-info Your bid must be at least 1500 USDC.
+
+        .c-btn__wrapper.c-btn__wrapper--center
+          a.c-btn.c-btn--bg(href="#") Place a Bid
+
+        a.playground__back(href="#") Back to Playground
+
+// SECTION :: END

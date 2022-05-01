@@ -1,0 +1,444 @@
+// SECTION :: START
+
+.playground {
+  &__section {
+    display: flex;
+    min-height: 100vh;
+    @include adaptive(767) {
+      flex-wrap: wrap;
+    }
+
+    &-left,
+    &-right {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 50%;
+      @include adaptive(767) {
+        width: 100%;
+        padding: 50px 15px;
+      }
+    }
+
+    &-left {
+      background-color: #2a252f;
+      @include adaptive(767) {
+        order: 2;
+      }
+
+      > div {
+        width: 100%;
+        max-width: 286px;
+      }
+
+      .playground__box {
+        &-list {
+          padding-bottom: 0;
+        }
+      }
+    }
+
+    &-right {
+      padding-top: 100px;
+      padding-bottom: 100px;
+      @include adaptive(767) {
+        order: 1;
+        padding-bottom: 50px;
+      }
+
+      > div {
+        width: 100%;
+        max-width: 345px;
+      }
+
+      .c-btn {
+        width: 100%;
+        max-width: 320px;
+      }
+    }
+  }
+
+  &__box {
+    display: flex;
+    flex-direction: column;
+    min-height: 100%;
+    border: 1px solid #FFFFFF;
+    background-color: #2a252f;
+
+    &.is-ended {
+      pointer-events: none;
+
+      .playground__box {
+        &-num {
+          p {
+            color: #ffffff;
+          }
+        }
+      }
+    }
+
+    &-head,
+    &-body {
+      flex: 1;
+      min-height: 1px;
+      max-height: 100%;
+      padding: 16px;
+    }
+
+    &-head {
+      position: relative;
+    }
+
+    &-body {
+      background-color: #1e1a22;
+
+      .c-btn {
+        width: 100%;
+        height: 32px;
+        font-size: 14px;
+        color: #ffffff;
+
+        &__wrapper {
+          padding-bottom: 10px;
+        }
+      }
+    }
+
+    &-header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-bottom: 10px;
+
+      span {
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        display: block;
+        max-width: 70px;
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 16px;
+        color: #FFFFFF;
+      }
+    }
+
+    &-num {
+      position: relative;
+
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+        margin-left: auto;
+        margin-right: auto;
+      }
+
+      p {
+        z-index: 5;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        width: 100%;
+        height: 100%;
+        font-weight: 500;
+        font-size: 20px;
+        line-height: 1;
+        color: #1E1A22;
+      }
+    }
+
+    &-badge {
+      overflow: hidden;
+      white-space: nowrap;
+      text-overflow: ellipsis;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: auto;
+      max-width: 100px;
+      height: 20px;
+      padding-left: 8px;
+      padding-right: 8px;
+      padding-bottom: 2px;
+      border-radius: 10px;
+      background-color: #DF1931;
+      font-weight: 500;
+      font-size: 12px;
+      color: #FFFFFF;
+
+      &.is-out {
+        background-color: #4c4355;
+      }
+    }
+
+    &-list {
+      display: flex;
+      flex-direction: column;
+      padding-bottom: 12px;
+
+      li {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        padding-bottom: 8px;
+
+        div {
+          display: flex;
+          align-items: center;
+
+          img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+            margin-right: 8px;
+          }
+        }
+      }
+
+      p {
+        font-weight: 300;
+        font-size: 12px;
+        line-height: 20px;
+        color: #F1F1F2;
+      }
+    }
+
+    &-info {
+      font-weight: 400;
+      font-size: 14px;
+      line-height: 24px;
+      text-align: center;
+      color: #FFFFFF;
+
+      &.hidden {
+        opacity: 0;
+      }
+    }
+
+    &-wrapper {
+      position: relative;
+      display: flex;
+      flex-wrap: wrap;
+      left: -16px;
+      width: calc(100% + 16px);
+      padding: 0 20px 20px;
+
+      > div {
+        width: 100%;
+        max-width: calc(100% / 4);
+        padding-left: 16px;
+        padding-bottom: 16px;
+        @include adaptive(1279) {
+          max-width: calc(100% / 3);
+        }
+        @include adaptive(1023) {
+          max-width: calc(100% / 2);
+        }
+        @include adaptive(767) {
+          max-width: 100%;
+        }
+      }
+    }
+  }
+
+  &__title {
+    padding-bottom: 32px;
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 40px;
+    text-align: center;
+    color: #F1F1F2;
+    @include adaptive(1279) {
+      font-size: 28px;
+    }
+    @include adaptive(767) {
+      font-size: 24px;
+    }
+  }
+
+  &__back {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 12px;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 40px;
+    text-align: center;
+    color: #FFFFFF;
+    @include adaptive(767) {
+      font-size: 14px;
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    max-width: 320px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-bottom: 19px;
+
+    &.playground__form--last {
+      .playground__form-field {
+        margin-bottom: 20px;
+      }
+    }
+
+    &-group {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+
+      > div {
+        width: 100%;
+        max-width: calc((100% - 16px) / 2);
+        @include adaptive(767) {
+          max-width: 100%;
+        }
+      }
+    }
+
+    &-field {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      margin-bottom: 13px;
+
+      label {
+        position: relative;
+        display: flex;
+        width: 100%;
+
+        &.is-full {
+          input {
+            padding-right: 22px;
+          }
+        }
+
+        input {
+          outline: none;
+          position: relative;
+          display: flex;
+          width: 100%;
+          height: 40px;
+          padding: 0 100px 0 44px;
+          border-radius: 4px;
+          border: 1px solid #4C4355;
+          box-shadow: none;
+          background-color: transparent;
+          font-weight: 400;
+          font-size: 14px;
+          color: #F1F1F2;
+        }
+
+        img {
+          position: absolute;
+          left: 16px;
+          top: 50%;
+          transform: translateY(-50%);
+          display: block;
+          max-width: 16px;
+          height: auto;
+        }
+
+        span {
+          position: absolute;
+          right: 0;
+          bottom: 0;
+          width: 100px;
+          padding-right: 8px;
+          padding-bottom: 8px;
+          font-weight: 400;
+          font-size: 12px;
+          line-height: 16px;
+          text-align: right;
+          color: #807E82;
+        }
+      }
+
+      .c-dropdown__wrapper {
+        max-width: 100%;
+      }
+    }
+
+    &-label {
+      padding-bottom: 8px;
+      font-weight: 500;
+      font-size: 14px;
+      line-height: 20px;
+      color: #F1F1F2;
+    }
+
+    &-info {
+      font-weight: 400;
+      font-size: 12px;
+      color: #807E82;
+    }
+  }
+
+  .staking__header {
+    background-color: transparent;
+    @include adaptive(767) {
+      background-color: #1e1a22;
+    }
+
+    &-wrapper {
+      @include adaptive(767) {
+        > div {
+          &:nth-of-type(1) {
+            display: none;
+          }
+        }
+      }
+    }
+
+    &-mobile {
+      @include adaptive(1279) {
+        opacity: 1;
+        visibility: visible;
+        overflow: unset;
+        transform: unset;
+        position: static;
+        flex-direction: row;
+        width: auto;
+        max-width: unset;
+        height: auto;
+        flex: 1;
+        border: none;
+        padding: 0;
+        box-shadow: none;
+        background-color: transparent;
+
+        > div {
+          &:nth-of-type(2) {
+            flex-direction: row;
+            width: auto;
+
+            .c-dropdown__wrapper {
+              max-width: 190px;
+              margin-top: 0;
+              margin-left: 16px;
+            }
+          }
+        }
+      }
+      @include adaptive(1023) {
+        > div {
+          &:nth-of-type(2) {
+            .c-dropdown__wrapper {
+              max-width: 150px;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+// SECTION :: END

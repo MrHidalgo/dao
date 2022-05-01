@@ -3,7 +3,7 @@
 .staking {
   position: relative;
   display: flex;
-  align-items: center;
+  //align-items: center;
   padding: 96px 15px 30px;
   min-height: 100vh;
 
@@ -231,6 +231,7 @@
     flex-direction: column;
     width: 100%;
     max-width: 1230px;
+    flex: 1;
     margin-left: auto;
     margin-right: auto;
     border-radius: 4px;
@@ -280,6 +281,11 @@
             }
           }
         }
+      }
+
+      .c-btn {
+        height: 32px;
+        font-size: 14px;
       }
     }
   }
@@ -423,6 +429,28 @@
           > p {
             font-size: 14px;
             color: #FFFFFF;
+
+            &.is-open {
+              color: #19df5c;
+            }
+          }
+
+          > u {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+
+            img {
+              display: block;
+              max-width: 100%;
+              height: auto;
+              margin-right: 8px;
+            }
+
+            span {
+              font-size: 14px;
+              color: #FFFFFF;
+            }
           }
         }
       }
@@ -497,6 +525,37 @@
         font-size: 10px;
         color: #ffffff;
       }
+    }
+  }
+
+  &__notify {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 23px;
+
+    i.icon-font {
+      color: #ffffff;
+      font-size: 15px;
+    }
+
+    span {
+      z-index: 2;
+      position: absolute;
+      top: -5px;
+      right: -5px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 12px;
+      height: 12px;
+      padding-bottom: 1px;
+      border-radius: 50%;
+      background-color: #df1931;
+      color: #ffffff;
+      font-weight: 500;
+      font-size: 7px;
     }
   }
 }

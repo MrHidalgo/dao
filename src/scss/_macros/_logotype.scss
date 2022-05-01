@@ -23,6 +23,21 @@
     }
   }
 
+  &.logo--playground {
+    width: 100%;
+    max-width: 312px;
+
+    .logo {
+      &__btn {
+        width: 100%;
+
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+
   &__btn {
     display: flex;
     align-items: flex-start;

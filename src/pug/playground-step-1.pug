@@ -1,0 +1,15 @@
+---
+title: The DeFiance DAO | Playground
+
+pageClassName: p-playground
+bodyClassMod: true
+---
+extends shared/_layout
+
+block header
+block footer
+block content
+  main.main.main--start(class!= pageClassName)
+
+    include components/playground/staking-playground-step-1
+

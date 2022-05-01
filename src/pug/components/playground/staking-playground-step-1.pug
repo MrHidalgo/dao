@@ -1,0 +1,133 @@
+// SECTION :: START
+
+mixin playgroundBox(classMod, num, badgeClassMod, badgeContent)
+  a.playground__box(href="#" class!= classMod)
+    .playground__box-head
+      .playground__box-header
+        div
+          span 12eij13jlk12312asdioasdgaosdb
+        div
+          p.playground__box-badge(class!= badgeClassMod)!= badgeContent
+      .playground__box-num
+        if(classMod == 'is-ended')
+          img(src="img/img-playground-box-bg--gray.svg" alt="")
+        else
+          img(src="img/img-playground-box-bg.svg" alt="")
+        p!= num
+    .playground__box-body
+      ul.playground__box-list
+        li
+          div
+            p Amount
+          div
+            p 345.00
+        li
+          div
+            p Current bid
+          div
+            img(src="img/logo-playground.png" srcset='img/logo-playground@2x.png 2x' alt="")
+            p 1453.00
+        li
+          div
+            p Buy now price
+          div
+            img(src="img/logo-playground.png" srcset="img/logo-playground@2x.png 2x" alt="")
+            p 2100.00
+      .c-btn__wrapper
+        if(badgeClassMod == 'is-out')
+          button.c-btn(href="#") Make an offer
+        else
+          button.c-btn.c-btn--bg(href="#") Buy Now
+      if(badgeClassMod == 'is-out')
+        p.playground__box-info.hidden Place a Bid
+      else
+        p.playground__box-info Place a Bid
+
+
+section#staking.staking
+
+  .staking__header
+    .staking__header-wrapper
+      div
+
+        .logo.logo--staking
+          a.logo__btn(href="#")
+            img(src="img/logo-icon.svg" alt="")
+
+        +hamburger()
+
+      .staking__header-mobile(mobile-block-js)
+        div
+
+          nav.staking__header-nav
+            a(href="#") Staking
+            a.is-active(href="#") Playground
+            a(href="#") Bridge
+            a(href="#") Venture
+            a(href="#") Toolkit
+
+        div
+
+          a.staking__header-btn(href="#") Buy $RSIST
+
+          .c-dropdown__wrapper
+            a.c-dropdown__toggle(href="#")
+              img(src="img/icon-ethereum.svg" alt="")
+              span Ethereum
+              i.icon-font.icon-chevron-down
+            .c-dropdown
+              div
+                a(href="#")
+                  img(src="img/icon-ethereum.svg" alt="")
+                  span Ethereum
+                a(href="#")
+                  img(src="img/icon-polygon.svg" alt="")
+                  span Polygon
+
+          .c-dropdown__wrapper
+            a.c-dropdown__toggle(href="#")
+              span 0xF21F0aF21F0aF21F0aF21F0a
+              i.icon-font.icon-chevron-down
+            .c-dropdown
+              div
+                a(href="#")
+                  span 0xF21F0aF21F0aF21F0aF21F0a
+                a(href="#")
+                  span 0xF21F0aF21F0aF21F0aF21F0a
+
+  .staking__body
+    .staking__body-head
+      div
+
+        .staking__toggle
+          a.is-active(href="#") Market
+          a(href="#") My Offers
+
+      div
+
+        .c-dropdown__wrapper
+          a.c-dropdown__toggle(href="#")
+            span Sort by
+            i.icon-font.icon-chevron-down
+          .c-dropdown
+            div
+              a(href="#")
+                span Action 1
+              a(href="#")
+                span Action 2
+
+    .staking__body-content
+
+      .playground__box-wrapper
+        each val, idx in [1,2]
+          div
+            +playgroundBox('', '312', '', '14h 34m 35s')
+          div
+            +playgroundBox('', '122', 'is-out', 'Not Started')
+          div
+            +playgroundBox('is-ended', '41', 'is-out', 'Ended')
+          div
+            +playgroundBox('', '1.5k', '', '17m 51s')
+
+
+// SECTION :: END

@@ -1,33 +1,5 @@
 // SECTION :: START
 
-mixin playgroundBox(classMod)
-  a.playground__box(href="#" class!= classMod)
-    .playground__box-top
-      div
-        img(src="img/circle-logo.svg" alt="")
-        p preRSIST
-      div
-        span -14h 34m 35s
-    .playground__box-head
-      div
-        .playground__box-visual
-          img(src="img/img-venture.svg" alt="")
-          p 100
-    .playground__box-body
-      ul
-        li
-          p Amount: 210.00
-        li
-          p!= "Reserve Price: <span class='green'>2000</span>"
-    .playground__box-footer
-      p
-        span Current Bid:
-        img(src="img/circle-logo.svg" alt="")
-        span 1920.00
-      .c-btn__wrapper
-        button.c-btn.c-btn--bg(type='button') Buy Now
-
-
 section#staking.staking
 
   .staking__header
@@ -125,12 +97,30 @@ section#staking.staking
             input(type='checkbox')
             span
 
+
     .staking__body-content
 
-      .playground__box-container
-        .playground__box-wrapper
-          each val, idx in [1,2,3,4,5,6,7,8,9,10]
-            div
-              +playgroundBox('')
+      .staking__table-container
+        table.staking__table.staking__table--btnHide
+          thead
+            tr
+              th Token Name
+              th Amount
+              th Status
+              th
+          tbody
+            each val, idx in [1,2]
+              tr
+                td
+                  u
+                    img(src="img/circle-logo.svg" alt="")
+                    span preRSIST
+                td
+                  p 345.00
+                td
+                  p Unlisted
+                td
+                  .c-btn__wrapper
+                    a.c-btn.c-btn--bg(href="#") List Token
 
 // SECTION :: END

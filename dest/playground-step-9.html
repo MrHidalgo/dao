@@ -33,15 +33,24 @@
     <!-- STYLE :: END-->
   </head>
   <body class="is-dark">
-    <main class="main main--start p-playground">
+    <main class="main main--start p-Playground">
       <!-- SECTION :: START-->
-      <section class="playground" id="playground">
+      <section class="staking" id="staking">
         <div class="staking__header">
           <div class="staking__header-wrapper">
-            <div></div>
+            <div>
+              <div class="logo logo--staking"><a class="logo__btn" href="#"><img src="img/logo-icon.svg" alt=""></a></div>
+              <div class="hamburger hamburger--squeeze" role="button" hamburger-js="hamburger-js">
+                <div class="hamburger-box">
+                  <div class="hamburger-inner"></div>
+                </div>
+              </div>
+            </div>
             <div class="staking__header-mobile" mobile-block-js>
-              <div></div>
               <div>
+                <nav class="staking__header-nav"><a href="#">Staking</a><a class="is-active" href="#">Playground</a><a href="#">Bridge</a><a href="#">Venture</a><a href="#">Toolkit</a></nav>
+              </div>
+              <div><a class="staking__header-btn" href="#">Buy $RSIST</a>
                 <div class="c-dropdown__wrapper"><a class="c-dropdown__toggle" href="#"><img src="img/icon-ethereum.svg" alt=""><span>Ethereum</span><i class="icon-font icon-chevron-down"></i></a>
                   <div class="c-dropdown">
                     <div><a href="#"><img src="img/icon-ethereum.svg" alt=""><span>Ethereum</span></a><a href="#"><img src="img/icon-polygon.svg" alt=""><span>Polygon</span></a></div>
@@ -56,53 +65,77 @@
             </div>
           </div>
         </div>
-        <div class="playground__section">
-          <div class="playground__section-left">
+        <div class="staking__body">
+          <div class="staking__body-head is-big">
             <div>
-              <div class="logo logo--playground"><a class="logo__btn" href="#"><img src="img/logo-icon.svg" alt=""></a></div>
+              <div class="staking__toggle"><a class="is-active" href="#">Market</a><a href="#">My preTokens</a></div>
+              <div class="staking__form">
+                <label>
+                  <input type="text" name="" placeholder="Search..."><a href="#"><i class="icon-font icon-search"></i></a>
+                </label>
+              </div>
+            </div>
+            <div>
+              <div class="c-dropdown__wrapper"><a class="c-dropdown__toggle" href="#"><span>Filter by</span><i class="icon-font icon-chevron-down"></i></a>
+                <div class="c-dropdown">
+                  <div><a href="#"><span>Action 1</span></a><a href="#"><span>Action 2</span></a></div>
+                </div>
+              </div>
+              <div class="c-dropdown__wrapper"><a class="c-dropdown__toggle" href="#"><span>Sort by</span><i class="icon-font icon-chevron-down"></i></a>
+                <div class="c-dropdown">
+                  <div><a href="#"><span>Price</span></a><a href="#"><span>Amount</span></a><a href="#"><span>Time Left</span></a></div>
+                </div>
+              </div>
+              <div class="staking__switch">
+                <p>Listed</p>
+                <label>
+                  <input type="checkbox"><span></span>
+                </label>
+              </div>
             </div>
           </div>
-          <div class="playground__section-right">
-            <div>
-              <h2 class="playground__title">List Token</h2>
-              <form class="playground__form playground__form--last" action="" method="" autocomplete="off">
-                <div class="playground__form-field">
-                  <div class="staking__toggle"><a href="#">Fixed Price</a><a class="is-active" href="#">Auction</a></div>
-                </div>
-                <div class="playground__form-field">
-                  <p class="playground__form-label">Amount</p>
-                  <label>
-                    <input type="text" name="" placeholder="" value="1650.00"><img src="img/circle-logo.svg" alt=""><span>/ 6571.22 USDC</span>
-                  </label>
-                </div>
-                <div class="playground__form-field">
-                  <p class="playground__form-info">Only ‘pre’ tokens are eligible to be listed.</p>
-                </div>
-                <!--.playground__form-field-->
-                <!--  p.playground__form-label Buy now price-->
-                <!--  label.is-full-->
-                <!--    input(type='text' name='' placeholder='' value='5000.00')-->
-                <!--    img(src="img/logo-playground.png" srcset='img/logo-playground@2x.png 2x' alt="")-->
-                <div class="playground__form-group">
-                  <div>
-                    <div class="playground__form-field">
-                      <p class="playground__form-label">Reserve Price</p>
-                      <label class="is-full">
-                        <input type="text" name="" placeholder="" value="4300.00"><img src="img/logo-playground.png" srcset="img/logo-playground@2x.png 2x" alt="">
-                      </label>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="playground__form-field">
-                      <p class="playground__form-label">Time Limit</p>
-                      <label class="is-full">
-                        <input type="text" name="" placeholder="" value="12:30"><img src="img/latest.svg" alt="">
-                      </label>
-                    </div>
-                  </div>
-                </div>
-              </form>
-              <div class="c-btn__wrapper c-btn__wrapper--center"><a class="c-btn c-btn--bg" href="#">List</a></div><a class="playground__back" href="#">Cancel</a>
+          <div class="staking__body-content">
+            <div class="staking__table-container">
+              <table class="staking__table staking__table--btnHide">
+                <thead>
+                  <tr>
+                    <th>Token Name</th>
+                    <th>Amount</th>
+                    <th>Status</th>
+                    <th></th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>
+                      <u><img src="img/circle-logo.svg" alt=""><span>preRSIST</span></u>
+                    </td>
+                    <td>
+                      <p>345.00</p>
+                    </td>
+                    <td>
+                      <p>Unlisted</p>
+                    </td>
+                    <td>
+                      <div class="c-btn__wrapper"><a class="c-btn c-btn--bg" href="#">List Token</a></div>
+                    </td>
+                  </tr>
+                  <tr>
+                    <td>
+                      <u><img src="img/circle-logo.svg" alt=""><span>preRSIST</span></u>
+                    </td>
+                    <td>
+                      <p>345.00</p>
+                    </td>
+                    <td>
+                      <p>Unlisted</p>
+                    </td>
+                    <td>
+                      <div class="c-btn__wrapper"><a class="c-btn c-btn--bg" href="#">List Token</a></div>
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
             </div>
           </div>
         </div>

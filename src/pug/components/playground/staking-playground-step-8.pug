@@ -51,8 +51,8 @@ section#playground.playground
         form.playground__form.playground__form--last(action='' method='' autocomplete='off')
           .playground__form-field
             .staking__toggle
-              a(href="#") Fixed Price
-              a.is-active(href="#") Auction
+              a.is-active(href="#") Fixed Price
+              a(href="#") Auction
           .playground__form-field
             p.playground__form-label Amount
             label
@@ -61,24 +61,11 @@ section#playground.playground
               span / 6571.22 USDC
           .playground__form-field
             p.playground__form-info Only ‘pre’ tokens are eligible to be listed.
-          //.playground__form-field
-          //  p.playground__form-label Buy now price
-          //  label.is-full
-          //    input(type='text' name='' placeholder='' value='5000.00')
-          //    img(src="img/logo-playground.png" srcset='img/logo-playground@2x.png 2x' alt="")
-          .playground__form-group
-            div
-              .playground__form-field
-                p.playground__form-label Reserve Price
-                label.is-full
-                  input(type='text' name='' placeholder='' value='4300.00')
-                  img(src="img/logo-playground.png" srcset='img/logo-playground@2x.png 2x' alt="")
-            div
-              .playground__form-field
-                p.playground__form-label Time Limit
-                label.is-full
-                  input(type='text' name='' placeholder='' value='12:30')
-                  img(src="img/latest.svg" alt="")
+          .playground__form-field
+            p.playground__form-label Price
+            label.is-full
+              input(type='text' name='' placeholder='' value='5000.00')
+              img(src="img/logo-playground.png" srcset='img/logo-playground@2x.png 2x' alt="")
 
         .c-btn__wrapper.c-btn__wrapper--center
           a.c-btn.c-btn--bg(href="#") List

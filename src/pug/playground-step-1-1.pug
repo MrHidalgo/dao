@@ -1,0 +1,84 @@
+---
+title: The DeFiance DAO | Playground
+
+pageClassName: p-playground
+bodyClassMod: true
+---
+extends shared/_layout
+
+block header
+block footer
+block modal
+  mixin modalContent()
+    .modal__body
+      p.c-modal__title Filters
+      .c-modal__line
+      form.c-modal__form(action='' method='')
+        .c-modal__form-field
+          p.c-modal__form-label Price Range
+          .c-modal__form-group
+            div
+              label
+                .c-dropdown__wrapper
+                  a.c-dropdown__toggle(href="#")
+                    img(src="img/icon-ethereum.svg" alt="")
+                    span Ethereum
+                    i.icon-font.icon-chevron-down
+                  .c-dropdown
+                    div
+                      a(href="#")
+                        img(src="img/icon-ethereum.svg" alt="")
+                        span Ethereum
+                      a(href="#")
+                        img(src="img/icon-polygon.svg" alt="")
+                        span Polygon
+            div
+              .c-modal__form-field
+                label
+                  input(type='text' name='' placeholder='Min')
+                  u
+                  input(type='text' name='' placeholder='Max')
+        .c-modal__form-field
+          p.c-modal__form-label Offer Type
+          label
+            .c-dropdown__wrapper
+              a.c-dropdown__toggle(href="#")
+                span Fixed Price
+                i.icon-font.icon-chevron-down
+              .c-dropdown
+                div
+                  a(href="#")
+                    span Action 1
+                  a(href="#")
+                    span Action 2
+                  a(href="#")
+                    span Action 3
+        .c-modal__form-field
+          p.c-modal__form-label Tokens
+          label
+            .c-dropdown__wrapper
+              a.c-dropdown__toggle(href="#")
+                span All
+                i.icon-font.icon-chevron-down
+              .c-dropdown
+                div
+                  a(href="#")
+                    span Action 1
+                  a(href="#")
+                    span Action 2
+                  a(href="#")
+                    span Action 3
+        .c-modal__form-field
+          .c-btn__wrapper
+            a.c-modal__clear(href="#") Clear
+            a.c-btn.c-btn--bg(href="#") Apply
+
+  +modal('playgroundFilter', 'modalContent')
+
+block content
+  main.main.main--start(class!= pageClassName)
+
+    include components/playground/staking-playground-step-1-1
+
+  #fundraisingOverlay
+

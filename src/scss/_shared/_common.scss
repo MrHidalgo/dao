@@ -70,6 +70,10 @@
         display: block;
         max-width: 24px;
         height: auto;
+
+        & + span {
+          padding-left: 15px;
+        }
       }
 
       span {
@@ -77,7 +81,6 @@
         white-space: nowrap;
         text-overflow: ellipsis;
         max-width: 100%;
-        padding-left: 15px;
         padding-right: 15px;
         font-weight: 400;
         font-size: 16px;
@@ -179,10 +182,12 @@
   background: rgba(0, 0, 0, 0.2);
   backdrop-filter: blur(24px);
 }
+
 .mfp-bg {
   opacity: 0;
   background-color: transparent;
 }
+
 .c-modal#fundraisingDonation {
   width: 100%;
   max-width: 880px;
@@ -259,6 +264,178 @@
     max-width: 420px;
     margin-left: auto;
     margin-right: auto;
+  }
+}
+
+.c-modal#playgroundFilter {
+  width: 100%;
+  max-width: 547px;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 40px 30px 50px;
+  border: 1px solid #FFFFFF;
+  background-color: #1E1A22;
+
+  .mfp-close {
+    opacity: 1;
+    color: #ffffff;
+  }
+
+  .c-modal {
+    &__title {
+      padding-bottom: 8px;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 35px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+
+    &__line {
+      width: 40px;
+      height: 2px;
+      margin-left: auto;
+      margin-right: auto;
+      margin-bottom: 32px;
+      border-radius: 5px;
+      background-color: #DF1931;
+    }
+
+    &__clear {
+      padding-left: 20px;
+      padding-right: 40px;
+      font-weight: 400;
+      font-size: 16px;
+      text-align: center;
+      color: #FFFFFF;
+    }
+
+    &__form {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      max-width: 387px;
+      margin-left: auto;
+      margin-right: auto;
+
+      &-group {
+        display: flex;
+        flex-wrap: wrap;
+
+        .c-modal__form-field {
+          margin-bottom: 0;
+        }
+
+        > div {
+          flex: 1;
+          min-width: 1px;
+          max-width: 100%;
+          @include adaptive(767) {
+            flex: 100%;
+          }
+
+          &:not(:last-of-type) {
+            margin-right: 12px;
+            @include adaptive(767) {
+              margin-right: 0;
+              margin-bottom: 17px;
+            }
+          }
+        }
+      }
+
+      &-field {
+        position: relative;
+        margin-bottom: 34px;
+
+        label {
+          display: flex;
+          width: 100%;
+
+          .c-dropdown {
+            &__wrapper {
+              max-width: 100%;
+            }
+
+            &__toggle {
+              span {
+                @include adaptive(767) {
+                  display: block;
+                }
+              }
+            }
+          }
+
+          input {
+            outline: none;
+            position: relative;
+            display: flex;
+            width: 80px;
+            height: 40px;
+            padding: 0 15px;
+            margin: 0;
+            border-radius: 4px;
+            border: 1px solid #4C4355;
+            box-shadow: none;
+            background-color: transparent;
+            font-weight: 400;
+            font-size: 14px;
+            line-height: 20px;
+            color: #F1F1F2;
+            @include inputPlaceholder {
+              font-weight: 400;
+              font-size: 14px;
+              line-height: 20px;
+              color: #F1F1F2;
+            }
+            @include adaptive(767) {
+              flex: 1;
+              min-width: 1px;
+              max-width: 100%;
+            }
+          }
+
+          > u {
+            position: relative;
+            flex: 1;
+            min-width: 1px;
+            max-width: 100%;
+            margin-left: 5px;
+            margin-right: 5px;
+
+            &:after {
+              content: '';
+              position: absolute;
+              top: 50%;
+              left: 50%;
+              transform: translate(-50%, -50%);
+              width: 12px;
+              height: 1px;
+              background-color: #ffffff;
+            }
+          }
+        }
+
+        .c-btn {
+          flex: 1;
+          min-width: 1px;
+          max-width: 100%;
+
+          &__wrapper {
+            align-items: center;
+            padding-top: 12px;
+          }
+        }
+      }
+
+      &-label {
+        padding-bottom: 16px;
+        font-weight: 500;
+        font-size: 16px;
+        line-height: 24px;
+        color: #FFFFFF;
+      }
+    }
   }
 }
 

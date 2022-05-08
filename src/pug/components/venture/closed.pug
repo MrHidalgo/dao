@@ -1,0 +1,92 @@
+// SECTION :: START
+
+section#closed.closed
+  .c-grid
+    .closed__wrapper
+
+      .closed__wrapper-head
+        div
+          h2 Closed Deals
+        div
+
+          .c-dropdown__wrapper
+            a.c-dropdown__toggle(href="#")
+              span Filter by
+              i.icon-font.icon-chevron-down
+            .c-dropdown
+              div
+                a(href="#")
+                  span Action 1
+                a(href="#")
+                  span Action 2
+
+          .c-dropdown__wrapper
+            a.c-dropdown__toggle(href="#")
+              span Sort by
+              i.icon-font.icon-chevron-down
+            .c-dropdown
+              div
+                a(href="#")
+                  span Action 1
+                a(href="#")
+                  span Action 2
+
+      .closed__wrapper-body
+
+        .closed__table-container
+          table.closed__table
+            thead
+              tr
+                th Name
+                th Chain
+                th Total Raised
+                th Participants
+                th Current Price
+                th
+            tbody
+              tr
+                td
+                  .token
+                    div
+                      img(src="img/icon-ethereum.svg" alt="")
+                    div
+                      p Dragon War
+                td
+                  .chain
+                    img(src="img/icon-ethereum.svg" alt="")
+                td
+                  p 281 879.66
+                td
+                  p 2 562
+                td
+                  p $0.06
+                td
+                  a.more(href="#")
+                    i.icon-font.icon-dots
+              each val, idx in [1,2,3,4,5,6]
+                 tr
+                   td
+                     .token
+                       div
+                         img(src="img/icon-ethereum.svg" alt="")
+                       div
+                         p Dragon War
+                   td
+                     .chain
+                       img(src="img/icon-ethereum.svg" alt="")
+                   td
+                     p 281 879.66
+                   td
+                     p 2 562
+                   td
+                     p $0.06
+                   td
+                     a.more(href="#")
+                       i.icon-font.icon-dots
+
+      .closed__wrapper-footer
+
+        .closed__btn.c-btn__wrapper.c-btn__wrapper--center
+          a.c-btn(href="#") Show More
+
+// SECTION :: END

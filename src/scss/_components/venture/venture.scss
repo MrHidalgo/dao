@@ -1,0 +1,78 @@
+// SECTION :: START
+
+.venture {
+  padding-top: 61px;
+  padding-bottom: 64px;
+  @include adaptive(767) {
+    padding-top: 100px;
+    padding-bottom: 50px;
+  }
+
+  .c-grid {
+    padding-left: 15px;
+    padding-right: 15px;
+  }
+
+  &__visual {
+    position: relative;
+    margin-left: auto;
+    margin-right: auto;
+
+    &-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+
+    &-title {
+      position: absolute;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+      right: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 653px;
+      height: 79px;
+      background-image: url('../img/img-venture-title-bg.svg');
+      background-repeat: no-repeat;
+      background-position: center;
+      font-weight: 500;
+      font-size: 24px;
+      line-height: 35px;
+      text-align: center;
+      color: #DF1931;
+      @include adaptive(767) {
+        left: -15px;
+        transform: unset;
+        width: calc(100% + 30px);
+        background-size: contain;
+        font-size: 20px;
+      }
+    }
+
+    img {
+      display: block;
+      max-width: 100%;
+      height: auto;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+  &__desc {
+    width: 100%;
+    max-width: 824px;
+    margin-left: auto;
+    margin-right: auto;
+    padding-top: 22px;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 28px;
+    text-align: center;
+    color: #FFFFFF;
+  }
+}
+
+// SECTION :: END

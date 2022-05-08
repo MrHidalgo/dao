@@ -1,0 +1,285 @@
+// SECTION :: START
+
+.closed {
+  padding-top: 12px;
+  padding-bottom: 88px;
+  @include adaptive(767) {
+    padding-bottom: 100px;
+  }
+
+  .c-grid {
+    width: 100%;
+    max-width: 1232px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  &__wrapper {
+    padding-top: 30px;
+    padding-bottom: 25px;
+    border-radius: 4px;
+    background-color: #2A252F;
+    @include adaptive(767) {
+      padding-top: 20px;
+      padding-bottom: 20px;
+    }
+
+    &-head {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding-left: 40px;
+      padding-right: 40px;
+      padding-bottom: 35px;
+      @include adaptive(1279) {
+        padding-left: 15px;
+        padding-right: 15px;
+      }
+      @include adaptive(767) {
+        flex-wrap: wrap;
+      }
+
+      > div {
+        &:nth-of-type(2) {
+          display: flex;
+          align-items: center;
+          @include adaptive(767) {
+            width: 100%;
+            flex-wrap: wrap;
+          }
+        }
+      }
+
+      h2 {
+        position: relative;
+        font-weight: 500;
+        font-size: 24px;
+        line-height: 35px;
+        color: #FFFFFF;
+        @include adaptive(767) {
+          margin-bottom: 20px;
+          font-size: 20px;
+        }
+
+        &:after {
+          content: '';
+          position: absolute;
+          top: calc(100% + 15px);
+          left: 0;
+          width: 40px;
+          height: 2px;
+          border-radius: 5px;
+          background-color: #DF1931;
+          @include adaptive(767) {
+            top: calc(100% + 5px);
+          }
+        }
+      }
+
+      .c-dropdown {
+        &__wrapper {
+          min-width: 160px;
+          @include adaptive(767) {
+            min-width: 100%;
+          }
+
+          &:not(:first-of-type) {
+            margin-left: 12px;
+            @include adaptive(767) {
+              margin-left: 0;
+              margin-top: 10px;
+            }
+          }
+        }
+
+        &__toggle {
+          height: 32px;
+          border-color: #fff;
+
+          span {
+            font-size: 14px;
+            line-height: normal;
+            @include adaptive(767) {
+              display: block;
+            }
+          }
+        }
+      }
+    }
+
+    &-footer {
+      padding-top: 30px;
+      @include adaptive(767) {
+        padding-top: 20px;
+      }
+    }
+  }
+
+  &__table {
+    width: 100%;
+    @include adaptive(1279) {
+      width: 1200px;
+    }
+
+    &-container {
+      @include adaptive(1279) {
+        white-space: nowrap;
+        position: relative;
+        overflow: hidden;
+        overflow-x: auto;
+      }
+    }
+
+    thead,
+    tbody {
+      th,
+      td {
+        padding: 10px 20px;
+      }
+    }
+
+    thead {
+      th {
+        font-weight: 500;
+        font-size: 12px;
+        line-height: 16px;
+        color: #FFFFFF;
+        text-align: left;
+      }
+    }
+
+    tbody {
+      tr {
+        &.is-opacity {
+          opacity: 0.56;
+        }
+        &:nth-of-type(odd) {
+          td {
+            background-color: #4C4355;
+          }
+        }
+
+        td {
+          vertical-align: middle;
+          padding-top: 12px;
+          padding-bottom: 12px;
+
+          > p {
+            font-size: 14px;
+            color: #FFFFFF;
+
+            &.is-open {
+              color: #19df5c;
+            }
+          }
+
+          > u {
+            display: flex;
+            align-items: center;
+            text-decoration: none;
+
+            img {
+              display: block;
+              max-width: 100%;
+              height: auto;
+              margin-right: 8px;
+            }
+
+            span {
+              font-size: 14px;
+              color: #FFFFFF;
+            }
+          }
+        }
+      }
+    }
+
+    .token {
+      display: flex;
+      align-items: center;
+
+      > div {
+        &:nth-of-type(1) {
+          width: 40px;
+
+          img {
+            display: block;
+            max-width: 100%;
+            height: auto;
+          }
+        }
+        &:nth-of-type(2) {
+          flex: 1;
+        }
+
+        p {
+          font-weight: 400;
+          font-size: 14px;
+          line-height: 20px;
+          color: #FFFFFF;
+        }
+      }
+    }
+
+    .chain {
+      img {
+        display: block;
+        max-width: 100%;
+        height: auto;
+      }
+    }
+
+    .action {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 24px;
+      padding-left: 10px;
+      padding-right: 10px;
+      border: 1px solid #FFFFFF;
+      border-radius: 4px;
+      background-color: transparent;
+      font-size: 12px;
+      line-height: 20px;
+      text-align: center;
+      color: #F1F1F2;
+      @include transition(background-color, color);
+
+      &:hover {
+        background-color: #ffffff;
+        color: #4C4355;
+        @include transition(background-color, color);
+      }
+    }
+
+    .more {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 24px;
+      height: 24px;
+
+      .icon-font {
+        font-size: 10px;
+        color: #ffffff;
+      }
+    }
+  }
+
+  &__btn {
+    .c-btn {
+      height: 32px;
+      border-color: #fff;;
+      background-color: transparent;
+      font-size: 14px;
+      color: #ffffff;
+
+      &:hover {
+        background-color: #ffffff;
+        color: #DF1931;
+      }
+    }
+  }
+}
+
+// SECTION :: END

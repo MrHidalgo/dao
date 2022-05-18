@@ -1,5 +1,7 @@
 import Common from "./common/common";
 
+import Countdown from "./macros/countdown";
+
 
 // EVENT LISTENER - LOAD
 // ========================================
@@ -7,6 +9,8 @@ window.addEventListener('load', (ev) => {
 
   // COMMON
   Common.initLoad();
+
+  Countdown.init();
 
   // MACROS
   const initHamburger = () => {

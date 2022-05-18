@@ -48,6 +48,70 @@ var Common = function () {
 
 /* harmony default export */ __webpack_exports__["default"] = (Common);
 
+/***/ }),
+
+/***/ "./src/js/macros/countdown.js":
+/*!************************************!*\
+  !*** ./src/js/macros/countdown.js ***!
+  \************************************/
+/***/ (function(__unused_webpack_module, __webpack_exports__, __webpack_require__) {
+
+__webpack_require__.r(__webpack_exports__);
+var Countdown = function () {
+  var init = function init() {
+    var clock; // Grab the current date
+
+    var currentDate = new Date(); // Target future date/24 hour time/Timezone
+
+    var targetDate = moment("2022-06-06 18:00:00"); // Calculate the difference in seconds between the future and current date
+
+    var diff = targetDate / 1000 - currentDate.getTime() / 1000;
+
+    if (diff <= 0) {
+      // If remaining countdown is 0
+      clock = $(".clock").FlipClock(0, {
+        clockFace: "DailyCounter",
+        countdown: true,
+        autostart: false
+      });
+      console.log("Date has already passed!");
+    } else {
+      var checktime = function checktime() {
+        var t = clock.getTime();
+
+        if (t <= 0) {
+          clock.setTime(0);
+        }
+
+        setTimeout(function () {
+          checktime();
+        }, 1000);
+      };
+
+      // Run countdown timer
+      clock = $("#upcomingCountdown").FlipClock(diff, {
+        clockFace: "DailyCounter",
+        countdown: true,
+        callbacks: {
+          stop: function stop() {
+            console.log("Timer has ended!");
+          }
+        }
+      }); // Check when timer reaches 0, then stop at 0
+
+      setTimeout(function () {
+        checktime();
+      }, 1000);
+    }
+  };
+
+  return {
+    init: init
+  };
+}();
+
+/* harmony default export */ __webpack_exports__["default"] = (Countdown);
+
 /***/ })
 
 /******/ 	});
@@ -97,12 +161,15 @@ var __webpack_exports__ = {};
   \***********************/
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _common_common__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./common/common */ "./src/js/common/common.js");
+/* harmony import */ var _macros_countdown__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./macros/countdown */ "./src/js/macros/countdown.js");
+
  // EVENT LISTENER - LOAD
 // ========================================
 
 window.addEventListener('load', function (ev) {
   // COMMON
-  _common_common__WEBPACK_IMPORTED_MODULE_0__["default"].initLoad(); // MACROS
+  _common_common__WEBPACK_IMPORTED_MODULE_0__["default"].initLoad();
+  _macros_countdown__WEBPACK_IMPORTED_MODULE_1__["default"].init(); // MACROS
 
   var initHamburger = function initHamburger() {
     if (!document.querySelector("[hamburger-js]")) return;

@@ -46,6 +46,39 @@
       }
     }
   }
+
+  &__back {
+    .c-btn {
+      height: 32px;
+      padding-left: 12px;
+      padding-right: 12px;
+      padding-bottom: 0;
+
+      .icon-font,
+      span {
+        color: #ffffff;
+      }
+
+      .icon-font {
+        transform: rotate(90deg);
+        font-size: 12px;
+
+        & + span {
+          padding-left: 18px;
+        }
+      }
+
+      span {
+        font-size: 14px;
+      }
+    }
+  }
+
+  .c-dropdown__wrapper {
+    & + .c-dropdown__wrapper {
+      margin-left: 16px;
+    }
+  }
 }
 
 // HEADER :: END

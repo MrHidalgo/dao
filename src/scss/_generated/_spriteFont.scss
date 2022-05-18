@@ -30,29 +30,41 @@
 	@if $filename == chevron-down {
 		$char: "\E001";
 	}
-	@if $filename == discord {
+	@if $filename == discord-logo {
 		$char: "\E002";
 	}
-	@if $filename == dots {
+	@if $filename == discord {
 		$char: "\E003";
 	}
-	@if $filename == filter {
+	@if $filename == dots {
 		$char: "\E004";
 	}
-	@if $filename == medium {
+	@if $filename == facebook-logo {
 		$char: "\E005";
 	}
-	@if $filename == notification {
+	@if $filename == filter {
 		$char: "\E006";
 	}
-	@if $filename == search {
+	@if $filename == medium-logo {
 		$char: "\E007";
 	}
-	@if $filename == swap {
+	@if $filename == medium {
 		$char: "\E008";
 	}
-	@if $filename == twitter {
+	@if $filename == notification {
 		$char: "\E009";
+	}
+	@if $filename == search {
+		$char: "\E00A";
+	}
+	@if $filename == swap {
+		$char: "\E00B";
+	}
+	@if $filename == twitter-logo {
+		$char: "\E00C";
+	}
+	@if $filename == twitter {
+		$char: "\E00D";
 	}
 
 	@return $char;
@@ -73,6 +85,10 @@
 	@include icon(chevron-down);
 
 }
+.icon-discord-logo {
+	@include icon(discord-logo);
+
+}
 .icon-discord {
 	@include icon(discord);
 
@@ -81,8 +97,16 @@
 	@include icon(dots);
 
 }
+.icon-facebook-logo {
+	@include icon(facebook-logo);
+
+}
 .icon-filter {
 	@include icon(filter);
+
+}
+.icon-medium-logo {
+	@include icon(medium-logo);
 
 }
 .icon-medium {
@@ -99,6 +123,10 @@
 }
 .icon-swap {
 	@include icon(swap);
+
+}
+.icon-twitter-logo {
+	@include icon(twitter-logo);
 
 }
 .icon-twitter {

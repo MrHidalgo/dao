@@ -75,7 +75,13 @@
       font-weight: 500;
       font-size: 14px;
       line-height: 20px;
-      color: #807E82;
+      color: #F1F1F2;
+    }
+
+    &-btn {
+      .c-btn {
+        width: 100%;
+      }
     }
 
     #upcomingCountdown {

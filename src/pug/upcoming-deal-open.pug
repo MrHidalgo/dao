@@ -1,0 +1,64 @@
+---
+title: The DeFiance DAO | Upcoming Deal Open
+
+pageClassName: p-upcoming-deal
+bodyClassMod: true
+footerModClassName: footer--iconWhite
+---
+extends shared/_layout
+
+block header
+  include components/common/_header-back
+block footer
+  include components/common/_footer-withoutbg
+block modal
+  mixin modalContent()
+    .modal__body
+      p.c-modal__title Deposit
+      .c-modal__line
+      form.c-modal__form(action='' method='')
+        .c-modal__form-field
+          p.c-modal__form-label Deposit Amount
+          .c-modal__form-group
+            div
+              label
+                .c-dropdown__wrapper
+                  a.c-dropdown__toggle(href="#")
+                    img(src="img/icon-ethereum.svg" alt="")
+                    span Ethereum
+                    i.icon-font.icon-chevron-down
+                  .c-dropdown
+                    div
+                      a(href="#")
+                        img(src="img/icon-ethereum.svg" alt="")
+                        span Ethereum
+                      a(href="#")
+                        img(src="img/icon-polygon.svg" alt="")
+                        span Polygon
+            div
+              .c-modal__form-field
+                label
+                  input(type='text' value='1250.00 USDC')
+
+        .c-modal__form-field
+          p.c-modal__form-label You will get
+          label
+            img(src="img/icon-polygon.svg" alt="")
+            input(type='text' value='5742.00 ATR')
+        .c-modal__form-field
+          .c-modal__info
+            hr
+            p You will be able to claim your ATR tokens when our event has been ended.
+        .c-modal__form-field
+          .c-btn__wrapper
+            a.c-modal__clear(href="#") Clear
+            a.c-btn.c-btn--bg(href="#") Deposit
+
+  +modal('upcomingDeposit', 'modalContent')
+
+block content
+  main.main(class!= pageClassName)
+
+    include components/upcoming-deal/upcoming-open
+
+    #fundraisingOverlay
